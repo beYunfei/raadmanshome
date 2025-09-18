@@ -1,0 +1,1300 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (35) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.ESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c0dc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (16) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (85) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 19[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038b77e in esp_system_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x40394628 in abort () at /mnt/c/work/esp32/esp-idf/components/newlib/src/abort.c:38
+#3  0x4038b776 in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x3c13524c "", line=line@entry=112, function=function@entry=0x3c15244c <__func__.2> "", expression=expression@entry=0x3c135224 "") at /mnt/c/work/esp32/esp-idf/components/esp_system/esp_err.c:49
+#4  0x4200b2c8 in rmt_tx_init (gpio=gpio@entry=GPIO_NUM_1, channel=channel@entry=0x3fca3ff8 <tx_channels+4>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:112
+#5  0x4200b7d6 in lightbulb_init () at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:209
+#6  0x00000000 in ?? ()
+Backtrace stopped: frame did not save the PC
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 20[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038b77e in esp_system_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x40394628 in abort () at /mnt/c/work/esp32/esp-idf/components/newlib/src/abort.c:38
+#3  0x4038b776 in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x3c13524c "", line=line@entry=112, function=function@entry=0x3c15244c <__func__.2> "", expression=expression@entry=0x3c135224 "") at /mnt/c/work/esp32/esp-idf/components/esp_system/esp_err.c:49
+#4  0x4200b2c8 in rmt_tx_init (gpio=gpio@entry=GPIO_NUM_1, channel=channel@entry=0x3fca3ff8 <tx_channels+4>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:112
+#5  0x4200b7d6 in lightbulb_init () at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:209
+#6  0x4200b0ca in lightbulb_thread_entry (arg=<error reading variable: value has been optimized out>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/app_main.c:230
+#7  0x4038c85e in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /mnt/c/work/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:252
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (24) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (36) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (349) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (369) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 21[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038b77e in esp_system_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x40394628 in abort () at /mnt/c/work/esp32/esp-idf/components/newlib/src/abort.c:38
+#3  0x4038b776 in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x3c13524c "", line=line@entry=112, function=function@entry=0x3c15244c <__func__.2> "", expression=expression@entry=0x3c135224 "") at /mnt/c/work/esp32/esp-idf/components/esp_system/esp_err.c:49
+#4  0x4200b2c8 in rmt_tx_init (gpio=gpio@entry=GPIO_NUM_1, channel=channel@entry=0x3fca3ff8 <tx_channels+4>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:112
+#5  0x4200b7d6 in lightbulb_init () at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:209
+#6  0x4200b0ca in lightbulb_thread_entry (arg=<error reading variable: value has been optimized out>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/app_main.c:230
+#7  0x4038c85e in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /mnt/c/work/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:252
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (16) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (85) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 22[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038b77e in esp_system_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x40394628 in abort () at /mnt/c/work/esp32/esp-idf/components/newlib/src/abort.c:38
+#3  0x4038b776 in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x3c13524c "", line=line@entry=112, function=function@entry=0x3c15244c <__func__.2> "", expression=expression@entry=0x3c135224 "") at /mnt/c/work/esp32/esp-idf/components/esp_system/esp_err.c:49
+#4  0x4200b2c8 in rmt_tx_init (gpio=gpio@entry=GPIO_NUM_1, channel=channel@entry=0x3fca3ff8 <tx_channels+4>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:112
+#5  0x4200b7d6 in lightbulb_init () at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:209
+#6  0x4200b0ca in lightbulb_thread_entry (arg=<error reading variable: value has been optimized out>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/app_main.c:230
+#7  0x4038c85e in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /mnt/c/work/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:252
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 23[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038b77e in esp_system_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x40394628 in abort () at /mnt/c/work/esp32/esp-idf/components/newlib/src/abort.c:38
+#3  0x4038b776 in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x3c13524c "", line=line@entry=112, function=function@entry=0x3c15244c <__func__.2> "", expression=expression@entry=0x3c135224 "") at /mnt/c/work/esp32/esp-idf/components/esp_system/esp_err.c:49
+#4  0x4200b2c8 in rmt_tx_init (gpio=gpio@entry=GPIO_NUM_1, channel=channel@entry=0x3fca3ff8 <tx_channels+4>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:112
+#5  0x4200b7d6 in lightbulb_init () at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:209
+#6  0x4200b0ca in lightbulb_thread_entry (arg=<error reading variable: value has been optimized out>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/app_main.c:230
+#7  0x4038c85e in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /mnt/c/work/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:252
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (24) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (349) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 24[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fcaacf0: 0x3c13524c 0x4200b2c8 0x3fcaad50 0x40394628 0x3fca3ff8 0x00000000 0x3fca86d0 0x3fc9d730
+3fcaad10: 0x3fcaad54 0x3fc9d74c 0x3fcaad50 0x726f6261 0x20292874 0x20736177 0x6c6c6163 0x61206465
+3fcaad30: 0x43502074 0x34783020 0x62383330 0x20333737 0x63206e6f 0x2065726f 0x00000030 0x00000000
+3fcaad50: 0x3c140030 0x38333034 0x33373762 0x00000000 0x00000003 0x3c135000 0x3fca3ff8 0x4038b776
+3fcaad70: 0x00000003 0x3c135000 0x3fca3ff8 0x4200b2c8 0x3fcaadc0 0x00000001 0x00000004 0x02625a00
+3fcaad90: 0x00000040 0x00000004 0x00000000 0x00000000 0x3c134fc8 0x000001e8 0x3fc9adb8 0x4200b7d6
+3fcaadb0: 0x00000000 0x3fca7fec 0x3fca7b74 0x4200b0ca 0x3fc9f2e0 0x32414f48 0x00353230 0x3c1351c8
+3fcaadd0: 0x3c1351d4 0x3c1351e0 0x3c1351f4 0x3c135210 0x3c135218 0x3c13521c 0x00000005 0x4200ad5e
+3fcaadf0: 0x00000000 0x00000000 0x00000000 0x4038c85e 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaae10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcaae30: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000150 0x3fcaac00 0x00000003 0x3fc9ea24 0x3fc9ea24
+3fcaae50: 0x3fcaae40 0x3fc9ea1c 0x00000018 0x00000000 0x00000000 0x3fcaae40 0x00000000 0x00000001
+3fcaae70: 0x3fca9e3c 0x5f706168 0x6867696c 0x6c756274 0x00000062 0x3fcaae30 0x00000001 0x00000000
+3fcaae90: 0x00000000 0x00000000 0x00000000 0x3fca6344 0x3fca63ac 0x3fca6414 0x00000000 0x00000000
+3fcaaeb0: 0x00000001 0x00000000 0x00000000 0x00000000 0x42005e1e 0x00000000 0x00000000 0x00000000
+3fcaaed0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaef0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf30: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf50: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf70: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+00000 0x3fcaafac 0xffffffff
+3fcaafb0: 0x3fcaafac 0x3fcaafac 0x00000000 0x3fcaafc0 0xffffffff 0x3fcaafc0 0x3fcaafc0 0x00000001
+3fcaafd0: 0x00000001 0x00000000 0x0000ffff 0x00000000 0x3fcaafc0 0x3fcaaf8c 0x00000028 0x3c160978
+3fcaaff0: 0x00000000 0x00000000 0x00000000 0x3fcab328 0x3fcab8cc 0x00000002 0x3fcab138 0x3fcab14c
+3fcab010: 0x00000002 0x00000054 0x00000000 0x3fcab018 0x00000000 0x00000000 0x00000000 0x3fcab030
+3fcab030: 0xffffffff 0x3fcab030 0x3fcab030 0x00000000 0x3fcab044 0xffffffff 0x3fcab044 0x3fcab044
+3fcab050: 0x00000001 0x00000001 0x00000000 0x0000ffff 0x00000000 0x00000000 0x3fcab010 0x0000000c
+3fcab070: 0x2d616f48 0x6867694c 0x3fca0074 0x00000054 0x00000000 0x3fcab080 0x00000000 0x00000000
+3fcab090: 0x00000000 0x3fcab098 0xffffffff 0x3fcab098 0x3fcab098 0x00000000 0x3fcab0ac 0xffffffff
+3fcab0b0: 0x3fcab0ac 0x3fcab0ac 0x00000001 0x00000001 0x00000000 0x0000ffff 0x00000000 0x00000000
+3fcab0d0: 0x3fcab078 0x0000002c 0x00170000 0x00170000 0x00000000 0x00000000 0x00000000 0x00000012
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 25[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038b77e in esp_system_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x40394628 in abort () at /mnt/c/work/esp32/esp-idf/components/newlib/src/abort.c:38
+#3  0x00000000 in ?? ()
+Backtrace stopped: frame did not save the PC
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 26[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fcaacf0: 0x3c13524c 0x4200b2c8 0x3fcaad50 0x40394628 0x3fca3ff8 0x00000000 0x3fca86d0 0x3fc9d730
+caad10: 0x3fcaad54 0x3fc9d74c 0x3fcaad50 0x726f6261 0x20292874 0x20736177 0x6c6c6163 0x61206465
+3fcaad30: 0x43502074 0x34783020 0x62383330 0x20333737 0x63206e6f 0x2065726f 0x00000030 0x00000000
+3fcaad50: 0x3c140030 0x38333034 0x33373762 0x00000000 0x00000003 0x3c135000 0x3fca3ff8 0x4038b776
+3fcaad70: 0x00000003 0x3c135000 0x3fca3ff8 0x4200b2c8 0x3fcaadc0 0x00000001 0x00000004 0x02625a00
+3fcaad90: 0x00000040 0x00000004 0x00000000 0x00000000 0x3c134fc8 0x000001e8 0x3fc9adb8 0x4200b7d6
+3fcaadb0: 0x00000000 0x3fca7fec 0x3fca7b74 0x4200b0ca 0x3fc9f2e0 0x32414f48 0x00353230 0x3c1351c8
+3fcaadd0: 0x3c1351d4 0x3c1351e0 0x3c1351f4 0x3c135210 0x3c135218 0x3c13521c 0x00000005 0x4200ad5e
+3fcaadf0: 0x00000000 0x00000000 0x00000000 0x4038c85e 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaae10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcaae30: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000150 0x3fcaac00 0x00000003 0x3fc9ea24 0x3fc9ea24
+3fcaae50: 0x3fcaae40 0x3fc9ea1c 0x00000018 0x00000000 0x00000000 0x3fcaae40 0x00000000 0x00000001
+3fcaae70: 0x3fca9e3c 0x5f706168 0x6867696c 0x6c756274 0x00000062 0x3fcaae30 0x00000001 0x00000000
+3fcaae90: 0x00000000 0x00000000 0x00000000 0x3fca6344 0x3fca63ac 0x3fca6414 0x00000000 0x00000000
+3fcaaeb0: 0x00000001 0x00000000 0x00000000 0x00000000 0x42005e1e 0x00000000 0x00000000 0x00000000
+3fcaaed0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaef0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+0000 0x00000000
+3fcaaf30: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf50: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf70: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf90: 0x00000054 0x00000000 0x3fcaaf94 0x00000000 0x00000000 0x00000000 0x3fcaafac 0xffffffff
+3fcaafb0: 0x3fcaafac 0x3fcaafac 0x00000000 0x3fcaafc0 0xffffffff 0x3fcaafc0 0x3fcaafc0 0x00000001
+3fcaafd0: 0x00000001 0x00000000 0x0000ffff 0x00000000 0x3fcaafc0 0x3fcaaf8c 0x00000028 0x3c160978
+3fcaaff0: 0x00000000 0x00000000 0x00000000 0x3fcab328 0x3fcab8cc 0x00000002 0x3fcab138 0x3fcab14c
+3fcab010: 0x00000002 0x00000054 0x00000000 0x3fcab018 0x00000000 0x00000000 0x00000000 0x3fcab030
+3fcab030: 0xffffffff 0x3fcab030 0x3fcab030 0x00000000 0x3fcab044 0xffffffff 0x3fcab044 0x3fcab044
+3fcab050: 0x00000001 0x00000001 0x00000000 0x0000ffff 0x00000000 0x00000000 0x3fcab010 0x0000000c
+3fcab070: 0x2d616f48 0x6867694c 0x3fca0074 0x00000054 0x00000000 0x3fcab080 0x00000000 0x00000000
+3fcab090: 0x00000000 0x3fcab098 0xffffffff 0x3fcab098 0x3fcab098 0x00000000 0x3fcab0ac 0xffffffff
+3fcab0b0: 0x3fcab0ac 0x3fcab0ac 0x00000001 0x00000001 0x00000000 0x0000ffff 0x00000000 0x00000000
+3fcab0d0: 0x3fcab078 0x0000002c 0x00170000 0x00170000 0x00000000 0x00000000 0x00000000 0x00000012
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (24) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (349) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 27[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038b77e in esp_system_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x40394628 in abort () at /mnt/c/work/esp32/esp-idf/components/newlib/src/abort.c:38
+#3  0x4038b776 in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x3c13524c "", line=line@entry=112, function=function@entry=0x3c15244c <__func__.2> "", expression=expression@entry=0x3c135224 "") at /mnt/c/work/esp32/esp-idf/components/esp_system/esp_err.c:49
+#4  0x4200b2c8 in rmt_tx_init (gpio=gpio@entry=GPIO_NUM_1, channel=channel@entry=0x3fca3ff8 <tx_channels+4>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:112
+#5  0x4200b7d6 in lightbulb_init () at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:209
+#6  0x4200b0ca in lightbulb_thread_entry (arg=<error reading variable: value has been optimized out>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/app_main.c:230
+#7  0x4038c85e in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /mnt/c/work/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:252
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 28[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fcaacf0: 0x3c13524c 0x4200b2c8 0x3fcaad50 0x40394628 0x3fca3ff8 0x00000000 0x3fca86d0 0x3fc9d730
+caad10: 0x3fcaad54 0x3fc9d74c 0x3fcaad50 0x726f6261 0x20292874 0x20736177 0x6c6c6163 0x61206465
+3fcaad30: 0x43502074 0x34783020 0x62383330 0x20333737 0x63206e6f 0x2065726f 0x00000030 0x00000000
+3fcaad50: 0x3c140030 0x38333034 0x33373762 0x00000000 0x00000003 0x3c135000 0x3fca3ff8 0x4038b776
+3fcaad70: 0x00000003 0x3c135000 0x3fca3ff8 0x4200b2c8 0x3fcaadc0 0x00000001 0x00000004 0x02625a00
+3fcaad90: 0x00000040 0x00000004 0x00000000 0x00000000 0x3c134fc8 0x000001e8 0x3fc9adb8 0x4200b7d6
+3fcaadb0: 0x00000000 0x3fca7fec 0x3fca7b74 0x4200b0ca 0x3fc9f2e0 0x32414f48 0x00353230 0x3c1351c8
+3fcaadd0: 0x3c1351d4 0x3c1351e0 0x3c1351f4 0x3c135210 0x3c135218 0x3c13521c 0x00000005 0x4200ad5e
+3fcaadf0: 0x00000000 0x00000000 0x00000000 0x4038c85e 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaae10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcaae30: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000150 0x3fcaac00 0x00000003 0x3fc9ea24 0x3fc9ea24
+3fcaae50: 0x3fcaae40 0x3fc9ea1c 0x00000018 0x00000000 0x00000000 0x3fcaae40 0x00000000 0x00000001
+3fcaae70: 0x3fca9e3c 0x5f706168 0x6867696c 0x6c756274 0x00000062 0x3fcaae30 0x00000001 0x00000000
+3fcaae90: 0x00000000 0x00000000 0x00000000 0x3fca6344 0x3fca63ac 0x3fca6414 0x00000000 0x00000000
+3fcaaeb0: 0x00000001 0x00000000 0x00000000 0x00000000 0x42005e1e 0x00000000 0x00000000 0x00000000
+3fcaaed0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaef0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf30: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf50: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf70: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcaaf90: 0x00000054 0x00000000 0x3fcaaf94 0x00000000 0x00000000 0x00000000 0x3fcaafac 0xffffffff
+3fcaafb0: 0x3fcaafac 0x3fcaafac 0x00000000 0x3fcaafc0 0xffffffff 0x3fcaafc0 0x3fcaafc0 0x00000001
+3fcaafd0: 0x00000001 0x00000000 0x0000ffff 0x00000000 0x3fcaafc0 0x3fcaaf8c 0x00000028 0x3c160978
+3fcaaff0: 0x00000000 0x00000000 0x00000000 0x3fcab328 0x3fcab8cc 0x00000002 0x3fcab138 0x3fcab14c
+3fcab010: 0x00000002 0x00000054 0x00000000 0x3fcab018 0x00000000 0x00000000 0x00000000 0x3fcab030
+3fcab030: 0xffffffff 0x3fcab030 0x3fcab030 0x00000000 0x3fcab044 0xffffffff 0x3fcab044 0x3fcab044
+3fcab050: 0x00000001 0x00000001 0x00000000 0x0000ffff 0x00000000 0x00000000 0x3fcab010 0x0000000c
+3fcab070: 0x2d616f48 0x6867694c 0x3fca0074 0x00000054 0x00000000 0x3fcab080 0x00000000 0x00000000
+3fcab090: 0x00000000 0x3fcab098 0xffffffff 0x3fcab098 0x3fcab098 0x00000000 0x3fcab0ac 0xffffffff
+3fcab0b0: 0x3fcab0ac 0x3fcab0ac 0x00000001 0x00000001 0x00000000 0x0000ffff 0x00000000 0x00000000
+3fcab0d0: 0x3fcab078 0x0000002c 0x00170000 0x00170000 0x00000000 0x00000000 0x00000000 0x00000012
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5D50 len 0001A2B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 29[0m
+[1;37mDatabase initialised. Accessory Device ID: 90:A7:CD:75:60:6B[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;31mProduct data size is not 8[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[1;31mE (528) rmt: rmt_tx_register_to_group(151): no free tx channels[0m
+[1;31mE (538) rmt: rmt_new_tx_channel(287): register channel failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x4200b2c4
+file: "./main/lightbulb.c" line 112
+func: rmt_tx_init
+expression: rmt_new_tx_channel(&config, channel)
+
+abort() was called at PC 0x4038b773 on core 0
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038b77e  SP      : 0x3fcaacf0  GP      : 0x3fc9b200  
+TP      : 0x3fcaae30  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x3fcaad54  A0      : 0x3fcaad1c  A1      : 0x3fcaad52  
+A2      : 0x00000000  A3      : 0x3fcaad49  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x7a797877  A7      : 0x76757473  S2      : 0x00000003  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038b77e in esp_system_abort (details=details@entry=0x3fcaad1c "abort() was called at PC 0x4038b773 on core 0") at /mnt/c/work/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x40394628 in abort () at /mnt/c/work/esp32/esp-idf/components/newlib/src/abort.c:38
+#3  0x4038b776 in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x3c13524c "", line=line@entry=112, function=function@entry=0x3c15244c <__func__.2> "", expression=expression@entry=0x3c135224 "") at /mnt/c/work/esp32/esp-idf/components/esp_system/esp_err.c:49
+#4  0x4200b2c8 in rmt_tx_init (gpio=gpio@entry=GPIO_NUM_1, channel=channel@entry=0x3fca3ff8 <tx_channels+4>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:112
+#5  0x4200b7d6 in lightbulb_init () at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/lightbulb.c:209
+#6  0x4200b0ca in lightbulb_thread_entry (arg=<optimized out>) at /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/main/app_main.c:230
+#7  0x00000000 in ?? ()
+Backtrace stopped: frame did not save the PC
+
+
+
+ELF file SHA256: f5d866d51
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 26 2025 15:10:30[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (24) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bbd4h (244692) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bbfc vaddr=3fc9aa00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fa60 vaddr=40380000 size=005b8h (  1464) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=1241bch (1196476) map[0m
+[0;32mI (349) esp_image: segment 4: paddr=001841e4 vaddr=403805b8 size=1a328h (107304) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e514 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (378) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e[0m
+[0;32mI (405) app_init: Compile time:     Jun 26 2025 15:01:25[0m
+[0;32mI (410) app_init: ELF file SHA256:  f5d866d51...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m

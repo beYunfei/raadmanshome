@@ -1,0 +1,192 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40389c44
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 27 2025 09:47:03[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (24) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3c3e4h (246756) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0005c40c vaddr=3fc9ae00 size=03c0ch ( 15372) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=1267b0h (1206192) map[0m
+[0;32mI (344) esp_image: segment 3: paddr=001867d8 vaddr=3fc9ea0c size=00368h (   872) load[0m
+[0;32mI (344) esp_image: segment 4: paddr=00186b48 vaddr=40380000 size=1ac70h (109680) load[0m
+[0;32mI (368) esp_image: segment 5: paddr=001a17c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (376) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (387) cpu_start: Unicore app[0m
+[0;32mI (395) cpu_start: Pro cpu start user code[0m
+[0;32mI (395) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (395) app_init: Application information:[0m
+[0;32mI (395) app_init: Project name:     lightbulb[0m
+[0;32mI (399) app_init: App version:      bfbcd6e-dirty[0m
+[0;32mI (404) app_init: Compile time:     Jun 27 2025 21:55:03[0m
+[0;32mI (409) app_init: ELF file SHA256:  5b8d94ca5...[0m
+[0;32mI (413) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c-dirty[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FCA62C0 len 00019D40 (103 KiB): RAM[0m
+[0;32mI (442) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (448) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (454) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (460) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (466) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (472) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (483) coexist: coexist rom version 9387209[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (487) main_task: Calling app_main()[0m
+[0;32mI (497) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 353[0m
+[1;37mDatabase initialised. Accessory Device ID: 5B:D3:AD:7B:3E:6C[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (527) lightbulb: Dummy Light Driver Init.[0m
+[0;32mI (527) lightbulb: Default color set: R=255, G=144, B=58[0m
+[0;32mI (537) app_hap_setup_payload: -----QR Code for HomeKit-----[0m
+[0;32mI (537) app_hap_setup_payload: Scan this QR code from the Home app on iOS[0m
+                              
+  █▀▀▀▀▀█ ▀▀▄███▄▄▀ █▀▀▀▀▀█   
+  █ ███ █  ▀  █▄█▀  █ ███ █   
+  █ ▀▀▀ █ ██ ▄▀  █▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀▄█▄▀ █▄█ ▀▀▀▀▀▀▀   
+   ▀▀▀▀█▀▀ █▄▄▀▀▄▀▀▄ ▀▀▄▄ █   
+  █ ██ █▀▀▄ ██ ▀▀█▀██  ▀ ██   
+  ▄█▀▀ ▀▀█▀██ ▀  ██▄▀▀▀▀▄▀    
+  █ ▄  ▄▀▄ ▀  ▄█▄▀▀ ▀  ▄  █   
+  ▀  ▀▀▀▀▀█▄▄▀▀ ▄██▀▀▀█▄█▄▄   
+  █▀▀▀▀▀█ █▄███▄▀▀█ ▀ ██▀▀█   
+  █ ███ █ █▄█▄▀ █▀█▀███▀███   
+  █ ▀▀▀ █ █  █▀▀ ▀▄▀▄▄▄▄▀ █   
+  ▀▀▀▀▀▀▀   ▀ ▀ ▀▀   ▀▀▀▀▀▀   
+                              
+
+[0;32mI (647) app_hap_setup_payload: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-homekit-sdk/qrcode.html?data=X-HM://005223CQ4Hoa6
+[1;32mMFi auth not supported. Falling back to HAP_MFI_AUTH_NONE[0m
+[0;32mI (667) pp: pp rom version: 9387209[0m
+[0;32mI (677) net80211: net80211 rom version: 9387209[0m
+[0;32mI (687) wifi:wifi driver task: 3fcb0b48, prio:23, stack:6656, core=0[0m
+[0;32mI (687) wifi:wifi firmware version: 2dcd4f5[0m
+[0;32mI (687) wifi:wifi certification version: v7.0[0m
+[0;32mI (687) wifi:config NVS flash: enabled[0m
+[0;32mI (697) wifi:config nano formatting: disabled[0m
+[0;32mI (697) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (707) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (707) wifi:Init management short buffer num: 32[0m
+[0;32mI (707) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (717) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (717) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (727) wifi:Init static rx buffer num: 10[0m
+[0;32mI (727) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (727) wifi_init: rx ba win: 6[0m
+[0;32mI (737) wifi_init: accept mbox: 6[0m
+[0;32mI (737) wifi_init: tcpip mbox: 32[0m
+[0;32mI (737) wifi_init: udp mbox: 10[0m
+[0;32mI (747) wifi_init: tcp mbox: 6[0m
+[0;32mI (747) wifi_init: tcp tx win: 5760[0m
+[0;32mI (747) wifi_init: tcp rx win: 5760[0m
+[0;32mI (757) wifi_init: tcp mss: 1440[0m
+[0;32mI (757) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (757) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;37mSetup ID: Hoa6[0m
+[1;37mHAP Main Loop Started[0m
+[0;32mI (767) mdns_mem: mDNS task will be created from internal RAM[0m
+[1;37mmDNS initialised[0m
+[1;37mRegistering HomeKit web handlers[0m
+[1;37mAnnouncing _hap._tcp mDNS service[0m
+[1;37mHAP Started[0m
+[0;32mI (787) wifi_prov_scheme_ble: BT memory released[0m
+[0;32mI (787) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (797) wifi_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (797) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (837) wifi:mode : sta (34:cd:b0:50:69:d8)[0m
+[0;32mI (837) wifi:enable tsf[0m
+[0;32mI (3247) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3247) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3257) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3257) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3377) wifi:connected with #Telia-3134A8, aid = 2, channel 1, BW20, bssid = e4:c0:e2:31:34:ae[0m
+[0;32mI (3387) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (3387) wifi:pm start, type: 1[0m
+
+[0;32mI (3387) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3397) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3417) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4237) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4237) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (4237) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4667) app_wifi: Connected with IPv6 Address:fe80:0000:0000:0000:36cd:b0ff:fe50:69d8[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[0;32mI (7667) app_wifi: Connected with IPv6 Address:2001:2043:5d09:dd00:36cd:b0ff:fe50:69d8[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[0;32mI (10567) esp_netif_handlers: sta ip: 192.168.1.127, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (10567) app_wifi: Connected with IP Address:192.168.1.127[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[0;32mI (101927) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (101927) lightbulb: lightbulb_set_on : false[0m
+[1;37mValue Changed[0m
+[0;32mI (103557) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (103557) lightbulb: lightbulb_set_on : true[0m
+[1;37mValue Changed[0m
+[0;32mI (103557) SPECIAL_DAY: Initializing SNTP[0m
+[0;32mI (103567) SPECIAL_DAY: Waiting for system time to be set... (1/10)[0m
+[0;32mI (104567) SPECIAL_DAY: System time is now synced.[0m
+[0;32mI (104567) SPECIAL_DAY: Current time: 2025-06-28 09:55:45[0m
+[0;32mI (104567) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (111237) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (111237) lightbulb: lightbulb_set_on : false[0m
+[0;32mI (111237) lightbulb: lightbulb_set_brightness : 0[0m
+[1;37mValue Changed[0m
+[0;32mI (114007) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (114007) lightbulb: lightbulb_set_on : true[0m
+[1;37mValue Changed[0m
+[0;32mI (114007) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (114017) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (125787) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (125787) lightbulb: lightbulb_set_on : false[0m
+[0;32mI (125787) lightbulb: lightbulb_set_brightness : 0[0m
+[1;37mValue Changed[0m
+[0;32mI (131407) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (131417) lightbulb: lightbulb_set_on : true[0m
+[0;32mI (131417) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (131417) lightbulb: lightbulb_set_brightness : 100[0m
+[1;37mValue Changed[0m
+[1;37mEvents Disabled for aid=1 iid=16[0m
+[1;37mEvents Disabled for aid=1 iid=17[0m
+[1;37mEvents Disabled for aid=1 iid=15[0m
+[1;37mEvents Disabled for aid=1 iid=13[0m

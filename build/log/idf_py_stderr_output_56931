@@ -1,0 +1,50 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40389c44: rv_utils_wait_for_intr at /mnt/c/work/esp32/esp-idf/components/riscv/include/riscv/rv_utils.h:79
+---  (inlined by) esp_cpu_wait_for_intr at /mnt/c/work/esp32/esp-idf/components/esp_hw_support/cpu.c:62
+[0m
+[0;33m--- 0x403cbf10: esp_bootloader_get_description at /mnt/c/work/esp32/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+[0m
+[0;33m--- 0x403ce710: esp_flash_encryption_enabled at /mnt/c/work/esp32/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+[0m
+[0;33m--- 0x403cbf1a: call_start_cpu0 at /mnt/c/work/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x403805a2: panic_abort at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+--- 0x4038bb0e: __ubsan_include at /mnt/c/work/esp32/esp-idf/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40380001: _vector_table at /mnt/c/work/esp32/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x4038055a: esp_restart_noos at /mnt/c/work/esp32/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:115
+[0m
+[0;33m--- 0x403cbf10: esp_bootloader_get_description at /mnt/c/work/esp32/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+[0m
+[0;33m--- 0x403ce710: esp_flash_encryption_enabled at /mnt/c/work/esp32/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+[0m
+[0;33m--- 0x403cbf1a: call_start_cpu0 at /mnt/c/work/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x403805a2: panic_abort at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+--- 0x4038bb0e: __ubsan_include at /mnt/c/work/esp32/esp-idf/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40380001: _vector_table at /mnt/c/work/esp32/esp-idf/components/riscv/vectors_intc.S:54
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x4038055a: esp_restart_noos at /mnt/c/work/esp32/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c:115
+[0m
+[0;33m--- 0x403cbf10: esp_bootloader_get_description at /mnt/c/work/esp32/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+[0m
+[0;33m--- 0x403ce710: esp_flash_encryption_enabled at /mnt/c/work/esp32/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+[0m
+[0;33m--- 0x403cbf1a: call_start_cpu0 at /mnt/c/work/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0m

@@ -1,0 +1,169 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (151) esp_image: segment 1: paddr=0005bc64 vaddr=3fc9ac00 sizeESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403899ce
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (16) boot: compile time Jun 27 2025 09:47:03[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (72) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (85) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bc3ch (244796) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bc64 vaddr=3fc9ac00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fac8 vaddr=40380000 size=00550h (  1360) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=124478h (1197176) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001844a0 vaddr=40380550 size=1a4a8h (107688) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e950 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (379) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (379) boot: Disabling RNG early entropy source...[0m
+[0;32mI (389) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e-dirty[0m
+[0;32mI (406) app_init: Compile time:     Jun 27 2025 09:40:50[0m
+[0;32mI (411) app_init: ELF file SHA256:  db7953784...[0m
+[0;32mI (415) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (424) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (428) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (432) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5F50 len 0001A0B0 (104 KiB): RAM[0m
+[0;32mI (444) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (450) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (456) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (462) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (468) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (474) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (480) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (485) coexist: coexist rom version 9387209[0m
+[0;32mI (489) main_task: Started on CPU0[0m
+[0;32mI (489) main_task: Calling app_main()[0m
+[0;32mI (499) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is not Paired with any controller[0m
+[1;37mDatabase initialised. Accessory Device ID: 44:16:EE:63:F2:B7[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (519) lightbulb: Dummy Light Driver Init.[0m
+[0;32mI (529) lightbulb: Default color set: R=255, G=144, B=58[0m
+[0;32mI (529) app_hap_setup_payload: -----QR Code for HomeKit-----[0m
+[0;32mI (539) app_hap_setup_payload: Scan this QR code from the Home app on iOS[0m
+                              
+  █▀▀▀▀▀█ ▀▀▄███▄▄▀ █▀▀▀▀▀█   
+  █ ███ █  ▀  █▄█▀  █ ███ █   
+  █ ▀▀▀ █ ██ ▄▀  █▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀▄█▄▀ █▄█ ▀▀▀▀▀▀▀   
+   ▀▀▀▀█▀▀ █▄▄▀▀▄▀▀▄ ▀▀▄▄ █   
+  █ ██ █▀▀▄ ██ ▀▀█▀██  ▀ ██   
+  ▄█▀▀ ▀▀█▀██ ▀  ██▄▀▀▀▀▄▀    
+  █ ▄  ▄▀▄ ▀  ▄█▄▀▀ ▀  ▄  █   
+  ▀  ▀▀▀▀▀█▄▄▀▀ ▄██▀▀▀█▄█▄▄   
+  █▀▀▀▀▀█ █▄███▄▀▀█ ▀ ██▀▀█   
+  █ ███ █ █▄█▄▀ █▀█▀███▀███   
+  █ ▀▀▀ █ █  █▀▀ ▀▄▀▄▄▄▄▀ █   
+  ▀▀▀▀▀▀▀   ▀ ▀ ▀▀   ▀▀▀▀▀▀   
+                              
+
+[0;32mI (649) app_hap_setup_payload: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-homekit-sdk/qrcode.html?data=X-HM://005223CQ4Hoa6
+[1;32mMFi auth not supported. Falling back to HAP_MFI_AUTH_NONE[0m
+[0;32mI (669) pp: pp rom version: 9387209[0m
+[0;32mI (669) net80211: net80211 rom version: 9387209[0m
+[0;32mI (689) wifi:wifi driver task: 3fcb16e4, prio:23, stack:6656, core=0[0m
+[0;32mI (689) wifi:wifi firmware version: 2dcd4f5[0m
+[0;32mI (689) wifi:wifi certification version: v7.0[0m
+[0;32mI (689) wifi:config NVS flash: enabled[0m
+[0;32mI (689) wifi:config nano formatting: disabled[0m
+[0;32mI (699) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (699) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (709) wifi:Init management short buffer num: 32[0m
+[0;32mI (709) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (709) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (719) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (719) wifi:Init static rx buffer num: 10[0m
+[0;32mI (729) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (729) wifi_init: rx ba win: 6[0m
+[0;32mI (729) wifi_init: accept mbox: 6[0m
+[0;32mI (739) wifi_init: tcpip mbox: 32[0m
+[0;32mI (739) wifi_init: udp mbox: 10[0m
+[0;32mI (739) wifi_init: tcp mbox: 6[0m
+[0;32mI (739) wifi_init: tcp tx win: 5760[0m
+[0;32mI (749) wifi_init: tcp rx win: 5760[0m
+[0;32mI (749) wifi_init: tcp mss: 1440[0m
+[0;32mI (749) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (759) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;37mSetup ID: Hoa6[0m
+[1;37mHAP Main Loop Started[0m
+[0;32mI (769) mdns_mem: mDNS task will be created from internal RAM[0m
+[1;37mmDNS initialised[0m
+[1;37mRegistering HomeKit web handlers[0m
+[1;37mAnnouncing _hap._tcp mDNS service[0m
+[1;37mHAP Started[0m
+[0;32mI (789) wifi_prov_scheme_ble: BT memory released[0m
+[0;32mI (789) app_wifi: Starting provisioning[0m
+[0;32mI (789) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (829) wifi:mode : sta (34:cd:b0:51:43:18)[0m
+[0;32mI (829) wifi:enable tsf[0m
+[0;32mI (839) BLE_INIT: BT controller compile version [4713a69][0m
+[0;32mI (839) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (839) BLE_INIT: Bluetooth MAC: 34:cd:b0:51:43:1a[0m
+[0;32mI (849) protocomm_nimble: BLE Host Task Started[0m
+[0;32mI (849) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (859) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (859) NimBLE: disc_mode=2[0m
+[0;32mI (859) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=256 adv_itvl_max=256[0m
+[0;32mI (869) NimBLE: [0m
+
+[0;32mI (879) wifi_prov_mgr: Provisioning started with service name : PROV_514318 [0m
+[0;32mI (879) app_wifi: Provisioning started[0m
+[0;32mI (879) app_wifi: -----QR Code for ESP Provisioning-----[0m
+[0;32mI (889) app_wifi: Scan this QR code from the phone app for Provisioning.[0m
+                                      
+  █▀▀▀▀▀█ ▀▀▀█▄█   ▀▄▄▀▀▄ ▀ █▀▀▀▀▀█   
+  █ ███ █  ▀▄█ █▄ ▀▄▄▀▀██ ▀ █ ███ █   
+  █ ▀▀▀ █  ▄▀█▀▄▀ ▀█ ▀▀██▄▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ █▄▀ █▄█▄█ █▄█ █ ▀ ▀▀▀▀▀▀▀   
+  ██ ▀█ ▀  ▀▄ ▀▄ ▄▀▀▀██ ▀▄▄ ▀▄▄ ▄▄▀   
+    ▀ ▄ ▀ ▄▀  ▀▀▀▀▄▄▀▄▀▀ ▀ █  ▄█▄█▀   
+   █ ▀▀▄▀█ ██ ▄▄██▄ ▀▀▀▄█  ▄▀█ ▀▄▄▀   
+  ▄█▀█▀ ▀▀█ ▀ ▄ ▄█▄ ▀█▄▀█▄▀▄▄█  ▄     
+   ▀▄█ ▄▀█▀ ██▀▀ █▀ ▀▄▀ ▄█  ███▄ ██   
+  █▄▀  ▄▀▀▀▄█▄▀▄███▀█▀█ ▀█ █▀▀ ▀▄▄▀   
+  ▄▀▀▀▄▄▀██  ▀▄▄█▄▀▀█▄█▄█▀▀█ ▀▄ ▄▀    
+  █  ▄ █▀▄▄  █▄  ▀█▄█▄▀▀█▀█ ▄█ ▀▄▄█   
+  ▀▀▀ ▀▀▀▀▄ █▀▀▄▄██▄█▀█ ▀██▀▀▀█▄▄▀    
+  █▀▀▀▀▀█  █ █▀▀▀██ ▄▀▄ █▄█ ▀ █ ▄ ▄   
+  █ ███ █ █▀ ▄█▀▀█▀▄█▄▄ ▀██▀▀▀▀▄▄▀▀   
+  █ ▀▀▀ █ ▄▀▀▀ ▄█▀█ █▀ ▀▀███▄▀█ █▄█   
+  ▀▀▀▀▀▀▀ ▀▀ ▀  ▀▀ ▀     ▀▀▀▀▀▀       
+                                      
+
+[0;32mI (1079) app_wifi: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-jumpstart/qrcode.html?data={"ver":"v1","name":"PROV_514318","pop":"b0514318","transport":"ble"}
+[0;32mI (1099) app_wifi: Provisioning Started. Name : PROV_514318, POP : b0514318[0m
+[1;32mPairing Mode timed out. Please reboot the device or re-enable pair setup.[0m
+[1;37mDeannouncing _hap._tcp mDNS service[0m

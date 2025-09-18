@@ -1,0 +1,721 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (152) esp_image: segment 1: paddr=0005c7c4 vaddr=3fc9ae00 sizeESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40389c44
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 27 2025 09:47:03[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (24) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3c79ch (247708) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0005c7c4 vaddr=3fc9ae00 size=03854h ( 14420) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=126f9ch (1208220) map[0m
+[0;32mI (344) esp_image: segment 3: paddr=00186fc4 vaddr=3fc9e654 size=006e8h (  1768) load[0m
+[0;32mI (345) esp_image: segment 4: paddr=001876b4 vaddr=40380000 size=1ac70h (109680) load[0m
+[0;32mI (368) esp_image: segment 5: paddr=001a232c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (377) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (387) cpu_start: Unicore app[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (396) app_init: Application information:[0m
+[0;32mI (396) app_init: Project name:     lightbulb[0m
+[0;32mI (400) app_init: App version:      bfbcd6e-dirty[0m
+[0;32mI (404) app_init: Compile time:     Jun 27 2025 21:55:03[0m
+[0;32mI (409) app_init: ELF file SHA256:  b18cfd095...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c-dirty[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FCA6290 len 00019D70 (103 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 27[0m
+[1;37mDatabase initialised. Accessory Device ID: 44:16:EE:63:F2:B7[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[0;32mI (528) lightbulb: Default color set: R=255, G=144, B=58[0m
+[0;32mI (538) app_hap_setup_payload: -----QR Code for HomeKit-----[0m
+[0;32mI (538) app_hap_setup_payload: Scan this QR code from the Home app on iOS[0m
+                              
+  █▀▀▀▀▀█ ▀▀▄███▄▄▀ █▀▀▀▀▀█   
+  █ ███ █  ▀  █▄█▀  █ ███ █   
+  █ ▀▀▀ █ ██ ▄▀  █▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀▄█▄▀ █▄█ ▀▀▀▀▀▀▀   
+   ▀▀▀▀█▀▀ █▄▄▀▀▄▀▀▄ ▀▀▄▄ █   
+  █ ██ █▀▀▄ ██ ▀▀█▀██  ▀ ██   
+  ▄█▀▀ ▀▀█▀██ ▀  ██▄▀▀▀▀▄▀    
+  █ ▄  ▄▀▄ ▀  ▄█▄▀▀ ▀  ▄  █   
+  ▀  ▀▀▀▀▀█▄▄▀▀ ▄██▀▀▀█▄█▄▄   
+  █▀▀▀▀▀█ █▄███▄▀▀█ ▀ ██▀▀█   
+  █ ███ █ █▄█▄▀ █▀█▀███▀███   
+  █ ▀▀▀ █ █  █▀▀ ▀▄▀▄▄▄▄▀ █   
+  ▀▀▀▀▀▀▀   ▀ ▀ ▀▀   ▀▀▀▀▀▀   
+                              
+
+[0;32mI (648) app_hap_setup_payload: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-homekit-sdk/qrcode.html?data=X-HM://005223CQ4Hoa6
+[1;32mMFi auth not supported. Falling back to HAP_MFI_AUTH_NONE[0m
+[0;32mI (668) pp: pp rom version: 9387209[0m
+[0;32mI (668) net80211: net80211 rom version: 9387209[0m
+[0;32mI (688) wifi:wifi driver task: 3fcb1460, prio:23, stack:6656, core=0[0m
+[0;32mI (688) wifi:wifi firmware version: 2dcd4f5[0m
+[0;32mI (688) wifi:wifi certification version: v7.0[0m
+[0;32mI (688) wifi:config NVS flash: enabled[0m
+[0;32mI (698) wifi:config nano formatting: disabled[0m
+[0;32mI (698) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (708) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (708) wifi:Init management short buffer num: 32[0m
+[0;32mI (708) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (718) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (718) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (728) wifi:Init static rx buffer num: 10[0m
+[0;32mI (728) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (728) wifi_init: rx ba win: 6[0m
+[0;32mI (738) wifi_init: accept mbox: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (738) wifi_init: udp mbox: 10[0m
+[0;32mI (748) wifi_init: tcp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp tx win: 5760[0m
+[0;32mI (748) wifi_init: tcp rx win: 5760[0m
+[0;32mI (748) wifi_init: tcp mss: 1440[0m
+[0;32mI (758) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (758) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (758) HAP lightbulb: START HAP ----> Initializing HAP Core[0m
+[1;37mSetup ID: Hoa6[0m
+[1;37mHAP Main Loop Started[0m
+[0;32mI (778) mdns_mem: mDNS task will be created from internal RAM[0m
+[1;37mmDNS initialised[0m
+[1;37mRegistering HomeKit web handlers[0m
+[1;37mAnnouncing _hap._tcp mDNS service[0m
+[1;37mHAP Started[0m
+[0;32mI (788) wifi_prov_scheme_ble: BT memory released[0m
+[0;32mI (798) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (798) wifi_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (808) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (848) wifi:mode : sta (34:cd:b0:51:43:18)[0m
+[0;32mI (848) wifi:enable tsf[0m
+[0;32mI (3258) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3258) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3268) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3268) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3298) wifi:connected with #Telia-3134A8, aid = 5, channel 1, BW20, bssid = e4:c0:e2:31:34:ae[0m
+[0;32mI (3298) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (3308) wifi:pm start, type: 1[0m
+
+[0;32mI (3308) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3318) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3328) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3378) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4668) app_wifi: Connected with IPv6 Address:fe80:0000:0000:0000:36cd:b0ff:fe51:4318[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[0;32mI (7668) app_wifi: Connected with IPv6 Address:2001:2043:5d09:dd00:36cd:b0ff:fe51:4318[0m
+[0;32mI (11068) esp_netif_handlers: sta ip: 192.168.1.128, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (11068) app_wifi: Connected with IP Address:192.168.1.128[0m
+[0;32mI (11068) HAP lightbulb: Lightbulb accessory started successfully[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (73738) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (73738) lightbulb: ON ON ON  : false[0m
+[0;32mI (73738) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (73738) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (73748) HAP lightbulb: hc is : [0m
+[0;32mI (75778) HAP lightbulb: Received Write for Light Brightness 100[0m
+[0;32mI (75778) lightbulb: lightbulb_set_brightness : 100[0m
+[1;37mValue Changed[0m
+[0;32mI (75788) HAP lightbulb: Characteristic 8 updated successfully[0m
+[0;32mI (75788) HAP lightbulb: hc is : [0m
+[0;32mI (75788) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (75798) lightbulb: ON ON ON  : true[0m
+[0;32mI (75798) SPECIAL_DAY: Initializing SNTP[0m
+[0;32mI (75808) SPECIAL_DAY: Waiting for system time to be set... (1/10)[0m
+[0;32mI (75808) lightbulb: Received event: 2[0m
+[0;33mW (75808) lightbulb:  Refresh : 2[0m
+[0;32mI (76808) SPECIAL_DAY: System time is now synced.[0m
+[0;32mI (76808) SPECIAL_DAY: Current time: 2025-06-28 13:59:23[0m
+[0;32mI (76808) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (76808) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (76818) HAP lightbulb: hc is : [0m
+[0;32mI (76818) lightbulb: Received event: 1[0m
+[0;32mI (76818) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (76828) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (76828) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (77838) lightbulb: Rainbow mode, step 1[0m
+[0;32mI (78938) lightbulb: Rainbow mode, step 2[0m
+[0;32mI (79778) HAP lightbulb: Received Write for Light Brightness 97[0m
+[0;32mI (79778) lightbulb: lightbulb_set_brightness : 97[0m
+[1;37mValue Changed[0m
+[0;32mI (79788) HAP lightbulb: Characteristic 8 updated successfully[0m
+[0;32mI (79788) HAP lightbulb: hc is : [0m
+[0;32mI (79798) lightbulb: Received event: 2[0m
+[0;33mW (79798) lightbulb:  Refresh : 2[0m
+[0;32mI (79998) lightbulb: Rainbow mode, step 3[0m
+[0;32mI (80078) HAP lightbulb: Received Write for Light Brightness 72[0m
+[0;32mI (80078) lightbulb: lightbulb_set_brightness : 72[0m
+[1;37mValue Changed[0m
+[0;32mI (80088) HAP lightbulb: Characteristic 8 updated successfully[0m
+[0;32mI (80088) HAP lightbulb: hc is : [0m
+[0;32mI (80098) lightbulb: Received event: 2[0m
+[0;33mW (80098) lightbulb:  Refresh : 2[0m
+[0;32mI (80288) HAP lightbulb: Received Write for Light Brightness 64[0m
+[0;32mI (80288) lightbulb: lightbulb_set_brightness : 64[0m
+[1;37mValue Changed[0m
+[0;32mI (80288) HAP lightbulb: Characteristic 8 updated successfully[0m
+[0;32mI (80288) HAP lightbulb: hc is : [0m
+[0;32mI (80298) lightbulb: Received event: 2[0m
+[0;33mW (80298) lightbulb:  Refresh : 2[0m
+[0;32mI (81098) lightbulb: Rainbow mode, step 4[0m
+[0;32mI (82198) lightbulb: Rainbow mode, step 5[0m
+[0;32mI (83298) lightbulb: Rainbow mode, step 6[0m
+[0;32mI (84398) lightbulb: Rainbow mode, step 7[0m
+[0;32mI (85498) lightbulb: Rainbow mode, step 8[0m
+[0;32mI (86598) lightbulb: Rainbow mode, step 9[0m
+[0;32mI (87698) lightbulb: Rainbow mode, step 10[0m
+[0;32mI (88798) lightbulb: Rainbow mode, step 11[0m
+[0;32mI (89898) lightbulb: Rainbow mode, step 12[0m
+[0;32mI (90998) lightbulb: Rainbow mode, step 13[0m
+[0;32mI (92098) lightbulb: Rainbow mode, step 14[0m
+[0;32mI (93198) lightbulb: Rainbow mode, step 15[0m
+[0;32mI (94298) lightbulb: Rainbow mode, step 16[0m
+[0;32mI (95398) lightbulb: Rainbow mode, step 17[0m
+[0;32mI (96498) lightbulb: Rainbow mode, step 18[0m
+[0;32mI (97598) lightbulb: Rainbow mode, step 19[0m
+[0;32mI (98618) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (98618) lightbulb: ON ON ON  : false[0m
+[0;32mI (98618) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (98618) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (98628) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (98638) HAP lightbulb: hc is : [0m
+[0;32mI (98638) lightbulb: Received event: 0[0m
+[0;32mI (99338) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (99348) lightbulb: ON ON ON  : true[0m
+[0;32mI (99348) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (99348) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (99358) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (99358) HAP lightbulb: hc is : [0m
+[0;32mI (99368) lightbulb: Received event: 1[0m
+[0;32mI (99368) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (99368) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (99378) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (100368) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (100368) lightbulb: ON ON ON  : false[0m
+[0;32mI (100368) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (100368) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (100378) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (100378) HAP lightbulb: hc is : [0m
+[0;32mI (100388) lightbulb: Received event: 0[0m
+[0;32mI (100978) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (100978) lightbulb: ON ON ON  : true[0m
+[0;32mI (100978) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (100978) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (100988) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (100998) HAP lightbulb: hc is : [0m
+[0;32mI (100998) lightbulb: Received event: 1[0m
+[0;32mI (100998) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (101008) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (101008) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (101888) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (101888) lightbulb: ON ON ON  : false[0m
+[0;32mI (101888) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (101898) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (101898) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (101908) HAP lightbulb: hc is : [0m
+[0;32mI (101918) lightbulb: Received event: 0[0m
+[0;32mI (104658) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (104658) lightbulb: ON ON ON  : true[0m
+[0;32mI (104658) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (104658) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (104668) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (104678) HAP lightbulb: hc is : [0m
+[0;32mI (104678) lightbulb: Received event: 1[0m
+[0;32mI (104678) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (104688) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (104688) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (105378) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (105378) lightbulb: ON ON ON  : false[0m
+[0;32mI (105378) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (105378) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (105388) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (105388) HAP lightbulb: hc is : [0m
+[0;32mI (105398) lightbulb: Received event: 0[0m
+[0;32mI (105988) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (105988) lightbulb: ON ON ON  : true[0m
+[0;32mI (105988) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (105988) HAP lightbulb: Turn off timer started for 36000000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (105998) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (106008) HAP lightbulb: hc is : [0m
+[0;32mI (106008) lightbulb: Received event: 1[0m
+[0;32mI (106008) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (106018) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (106018) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (107028) lightbulb: Rainbow mode, step 1[0m
+[0;32mI (107828) HAP lightbulb: Received Write for Light Brightness 60[0m
+[0;32mI (107828) lightbulb: lightbulb_set_brightness : 60[0m
+[1;37mValue Changed[0m
+[0;32mI (107828) HAP lightbulb: Characteristic 8 updated successfully[0m
+[0;32mI (107838) HAP lightbulb: hc is : [0m
+[0;32mI (107848) lightbulb: Received event: 2[0m
+[0;33mW (107848) lightbulb:  Refresh : 2[0m
+[0;32mI (108038) HAP lightbulb: Received Write for Light Brightness 36[0m
+[0;32mI (108038) lightbulb: lightbulb_set_brightness : 36[0m
+[1;37mValue Changed[0m
+[0;32mI (108038) HAP lightbulb: Characteristic 8 updated successfully[0m
+[0;32mI (108048) HAP lightbulb: hc is : [0m
+[0;32mI (108048) lightbulb: Received event: 2[0m
+[0;33mW (108048) lightbulb:  Refresh : 2[0m
+[0;32mI (108058) lightbulb: Rainbow mode, step 2[0m
+[0;32mI (108338) HAP lightbulb: Received Write for Light Brightness 29[0m
+[0;32mI (108338) lightbulb: lightbulb_set_brightness : 29[0m
+[1;37mValue Changed[0m
+[0;32mI (108348) HAP lightbulb: Characteristic 8 updated successfully[0m
+[0;32mI (108348) HAP lightbulb: hc is : [0m
+[0;32mI (108358) lightbulb: Received event: 2[0m
+[0;33mW (108358) lightbulb:  Refresh : 2[0m
+[0;32mI (109058) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (109058) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (109058) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (109068) HAP lightbulb: Received Write for Light Hue 255.000000[0m
+[0;32mI (109078) lightbulb: lightbulb_set_hue : 255.000000[0m
+[1;37mValue Changed[0m
+[0;32mI (109078) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (109088) HAP lightbulb: hc is : [0m
+[0;32mI (109098) lightbulb: Received event: 2[0m
+[0;33mW (109098) lightbulb:  Refresh : 2[0m
+[0;32mI (109098) lightbulb: Rainbow mode, step 3[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[0;32mI (109748) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (109748) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (109748) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (110158) lightbulb: Rainbow mode, step 4[0m
+[0;32mI (110388) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (110388) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (110388) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (110398) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (110408) lightbulb: lightbulb_set_hue : 30.000000[0m
+[1;37mValue Changed[0m
+[0;32mI (110418) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (110418) HAP lightbulb: hc is : [0m
+[1;37mNotification Sent[0m
+[0;32mI (110428) lightbulb: Received event: 2[0m
+[0;33mW (110438) lightbulb:  Refresh : 2[0m
+[0;32mI (110498) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (110498) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (110498) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (111008) HAP lightbulb: Received Write for Light Saturation 48.000000[0m
+[0;32mI (111008) lightbulb: lightbulb_set_saturation : 48.000000[0m
+[1;31mE (111008) lightbulb: Invalid saturation value: 48.000000, must be between 0.0 and 1.0[0m
+[0;32mI (111018) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (111018) lightbulb: lightbulb_set_hue : 30.000000[0m
+[0;32mI (111028) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (111028) HAP lightbulb: hc is : [0m
+[0;32mI (111038) lightbulb: Received event: 2[0m
+[0;33mW (111038) lightbulb:  Refresh : 2[0m
+[0;32mI (111238) lightbulb: Rainbow mode, step 5[0m
+[0;32mI (111618) HAP lightbulb: Received Write for Light Saturation 48.000000[0m
+[0;32mI (111618) lightbulb: lightbulb_set_saturation : 48.000000[0m
+[1;31mE (111618) lightbulb: Invalid saturation value: 48.000000, must be between 0.0 and 1.0[0m
+[0;32mI (112338) lightbulb: Rainbow mode, step 6[0m
+[0;32mI (113438) lightbulb: Rainbow mode, step 7[0m
+[0;32mI (114538) lightbulb: Rainbow mode, step 8[0m
+[0;32mI (115638) lightbulb: Rainbow mode, step 9[0m
+[0;32mI (116738) lightbulb: Rainbow mode, step 10[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m
+[0;32mI (117838) lightbulb: Rainbow mode, step 11[0m
+[0;32mI (118938) lightbulb: Rainbow mode, step 12[0m
+[0;32mI (120038) lightbulb: Rainbow mode, step 13[0m
+[0;32mI (121138) lightbulb: Rainbow mode, step 14[0m
+[0;32mI (122238) lightbulb: Rainbow mode, step 15[0m
+[0;32mI (123338) lightbulb: Rainbow mode, step 16[0m
+[0;32mI (124438) lightbulb: Rainbow mode, step 17[0m
+[0;32mI (125538) lightbulb: Rainbow mode, step 18[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[0;32mI (126568) lightbulb: Rainbow mode, step 19[0m
+[0;32mI (127668) lightbulb: Rainbow mode, step 20[0m
+[0;32mI (128768) lightbulb: Rainbow mode, step 21[0m
+[0;32mI (129868) lightbulb: Rainbow mode, step 22[0m
+[0;32mI (130968) lightbulb: Rainbow mode, step 23[0m
+[0;32mI (132068) lightbulb: Rainbow mode, step 24[0m
+[0;32mI (133168) lightbulb: Rainbow mode, step 25[0m
+[0;32mI (134268) lightbulb: Rainbow mode, step 26[0m
+[0;32mI (135368) lightbulb: Rainbow mode, step 27[0m
+[0;32mI (136468) lightbulb: Rainbow mode, step 28[0m
+[0;32mI (137568) lightbulb: Rainbow mode, step 29[0m
+[0;32mI (138668) lightbulb: Rainbow mode, step 30[0m
+[0;32mI (139768) lightbulb: Rainbow mode, step 31[0m
+[0;32mI (140868) lightbulb: Rainbow mode, step 32[0m
+[0;32mI (141968) lightbulb: Rainbow mode, step 33[0m
+[0;32mI (143068) lightbulb: Rainbow mode, step 34[0m
+[0;32mI (144168) lightbulb: Rainbow mode, step 35[0m
+[0;32mI (145268) lightbulb: Rainbow mode, step 36[0m
+[0;32mI (146368) lightbulb: Rainbow mode, step 37[0m
+[0;32mI (147148) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (147148) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (147158) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (147158) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (147168) lightbulb: lightbulb_set_hue : 30.000000[0m
+[0;32mI (147168) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (147178) HAP lightbulb: hc is : [0m
+[0;32mI (147188) lightbulb: Received event: 2[0m
+[0;33mW (147188) lightbulb:  Refresh : 2[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[0;32mI (147448) lightbulb: Rainbow mode, step 38[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[0;32mI (147548) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (147548) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (147548) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (148458) lightbulb: Rainbow mode, step 39[0m
+[0;32mI (149558) lightbulb: Rainbow mode, step 40[0m
+[0;32mI (150658) lightbulb: Rainbow mode, step 41[0m
+[0;32mI (151758) lightbulb: Rainbow mode, step 42[0m
+[0;32mI (152858) lightbulb: Rainbow mode, step 43[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m
+[0;32mI (153958) lightbulb: Rainbow mode, step 44[0m
+[0;32mI (155058) lightbulb: Rainbow mode, step 45[0m
+[0;32mI (155758) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (155758) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (155758) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (155768) HAP lightbulb: Received Write for Light Hue 255.000000[0m
+[0;32mI (155778) lightbulb: lightbulb_set_hue : 255.000000[0m
+[1;37mValue Changed[0m
+[0;32mI (155778) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (155788) HAP lightbulb: hc is : [0m
+[0;32mI (155798) lightbulb: Received event: 2[0m
+[0;33mW (155798) lightbulb:  Refresh : 2[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[0;32mI (156068) lightbulb: Rainbow mode, step 46[0m
+[0;32mI (156078) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (156078) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (156078) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[0;32mI (157168) lightbulb: Rainbow mode, step 47[0m
+[0;32mI (158268) lightbulb: Rainbow mode, step 48[0m
+[0;32mI (159368) lightbulb: Rainbow mode, step 49[0m
+[0;32mI (160468) lightbulb: Rainbow mode, step 50[0m
+[0;32mI (161568) lightbulb: Rainbow mode, step 51[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m
+[0;32mI (162668) lightbulb: Rainbow mode, step 52[0m
+[0;32mI (163768) lightbulb: Rainbow mode, step 53[0m
+[0;32mI (164868) lightbulb: Rainbow mode, step 54[0m
+[0;32mI (165968) lightbulb: Rainbow mode, step 55[0m
+[0;32mI (167068) lightbulb: Rainbow mode, step 56[0m
+[0;32mI (168168) lightbulb: Rainbow mode, step 57[0m
+[0;32mI (169228) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (169228) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (169268) lightbulb: Rainbow mode, step 58[0m
+[0;32mI (170338) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:396, winSize:64[0m
+[0;32mI (170368) lightbulb: Rainbow mode, step 59[0m
+[0;32mI (171468) lightbulb: Rainbow mode, step 60[0m
+[0;32mI (172568) lightbulb: Rainbow mode, step 61[0m
+[0;32mI (173208) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (173208) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (173668) lightbulb: Rainbow mode, step 62[0m
+[0;32mI (174228) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:407, winSize:64[0m
+[0;32mI (174768) lightbulb: Rainbow mode, step 63[0m
+[0;32mI (175868) lightbulb: Rainbow mode, step 64[0m
+[0;32mI (176968) lightbulb: Rainbow mode, step 65[0m
+[0;32mI (178068) lightbulb: Rainbow mode, step 66[0m
+[0;32mI (179168) lightbulb: Rainbow mode, step 67[0m
+[0;32mI (180268) lightbulb: Rainbow mode, step 68[0m
+[0;32mI (181368) lightbulb: Rainbow mode, step 69[0m
+[0;32mI (182468) lightbulb: Rainbow mode, step 70[0m
+[0;32mI (183568) lightbulb: Rainbow mode, step 71[0m
+[0;32mI (184668) lightbulb: Rainbow mode, step 72[0m
+[0;32mI (185768) lightbulb: Rainbow mode, step 73[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[0;32mI (186798) lightbulb: Rainbow mode, step 74[0m
+[0;32mI (187898) lightbulb: Rainbow mode, step 75[0m
+[0;32mI (188998) lightbulb: Rainbow mode, step 76[0m
+[0;32mI (190098) lightbulb: Rainbow mode, step 77[0m
+[0;32mI (191198) lightbulb: Rainbow mode, step 78[0m
+[0;32mI (192298) lightbulb: Rainbow mode, step 79[0m
+[0;32mI (193398) lightbulb: Rainbow mode, step 80[0m
+[0;32mI (194498) lightbulb: Rainbow mode, step 81[0m
+[0;32mI (195598) lightbulb: Rainbow mode, step 82[0m
+[0;32mI (196698) lightbulb: Rainbow mode, step 83[0m
+[0;32mI (197798) lightbulb: Rainbow mode, step 84[0m
+[0;32mI (198898) lightbulb: Rainbow mode, step 85[0m
+[0;32mI (199998) lightbulb: Rainbow mode, step 86[0m
+[0;32mI (201098) lightbulb: Rainbow mode, step 87[0m
+[0;32mI (202198) lightbulb: Rainbow mode, step 88[0m
+[0;32mI (203298) lightbulb: Rainbow mode, step 89[0m
+[0;32mI (204398) lightbulb: Rainbow mode, step 90[0m
+[0;32mI (205498) lightbulb: Rainbow mode, step 91[0m
+[0;32mI (206598) lightbulb: Rainbow mode, step 92[0m
+[0;32mI (207698) lightbulb: Rainbow mode, step 93[0m
+[0;32mI (208798) lightbulb: Rainbow mode, step 94[0m
+[0;32mI (209898) lightbulb: Rainbow mode, step 95[0m
+[0;32mI (210998) lightbulb: Rainbow mode, step 96[0m
+[0;32mI (212098) lightbulb: Rainbow mode, step 97[0m
+[0;32mI (213198) lightbulb: Rainbow mode, step 98[0m
+[0;32mI (214298) lightbulb: Rainbow mode, step 99[0m
+[0;32mI (215398) lightbulb: Rainbow mode, step 100[0m
+[0;32mI (216498) lightbulb: Rainbow mode, step 101[0m
+[0;32mI (217598) lightbulb: Rainbow mode, step 102[0m
+[0;32mI (218698) lightbulb: Rainbow mode, step 103[0m
+[0;32mI (219798) lightbulb: Rainbow mode, step 104[0m
+[0;32mI (220898) lightbulb: Rainbow mode, step 105[0m
+[0;32mI (221998) lightbulb: Rainbow mode, step 106[0m
+[0;32mI (223098) lightbulb: Rainbow mode, step 107[0m
+[0;32mI (224198) lightbulb: Rainbow mode, step 108[0m
+[0;32mI (225298) lightbulb: Rainbow mode, step 109[0m
+[1;37mEvents Disabled for aid=1 iid=17[0m
+[1;37mEvents Disabled for aid=1 iid=16[0m
+[1;37mEvents Disabled for aid=1 iid=13[0m
+[1;37mEvents Disabled for aid=1 iid=15[0m
+[0;32mI (226398) lightbulb: Rainbow mode, step 110[0m
+[0;32mI (227498) lightbulb: Rainbow mode, step 111[0m
+[0;32mI (228598) lightbulb: Rainbow mode, step 112[0m
+[0;32mI (229698) lightbulb: Rainbow mode, step 113[0m
+[0;32mI (230698) lightbulb: Rainbow mode, step 114[0m
+[0;32mI (231798) lightbulb: Rainbow mode, step 115[0m
+[0;32mI (232898) lightbulb: Rainbow mode, step 116[0m
+[0;32mI (233998) lightbulb: Rainbow mode, step 117[0m
+[0;32mI (235098) lightbulb: Rainbow mode, step 118[0m
+[0;32mI (236198) lightbulb: Rainbow mode, step 119[0m
+[0;32mI (237298) lightbulb: Rainbow mode, step 120[0m
+[0;32mI (238398) lightbulb: Rainbow mode, step 121[0m
+[0;32mI (239498) lightbulb: Rainbow mode, step 122[0m
+[0;32mI (240598) lightbulb: Rainbow mode, step 123[0m
+[0;32mI (241698) lightbulb: Rainbow mode, step 124[0m
+[0;32mI (242798) lightbulb: Rainbow mode, step 125[0m
+[0;32mI (243898) lightbulb: Rainbow mode, step 126[0m
+[0;32mI (244998) lightbulb: Rainbow mode, step 127[0m
+[0;32mI (246098) lightbulb: Rainbow mode, step 128[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[0;32mI (247188) lightbulb: Rainbow mode, step 129[0m
+[0;32mI (248288) lightbulb: Rainbow mode, step 130[0m
+[0;32mI (249388) lightbulb: Rainbow mode, step 131[0m
+[0;32mI (250488) lightbulb: Rainbow mode, step 132[0m
+[0;32mI (251588) lightbulb: Rainbow mode, step 133[0m
+[0;32mI (252688) lightbulb: Rainbow mode, step 134[0m
+[0;32mI (253788) lightbulb: Rainbow mode, step 135[0m
+[0;32mI (254888) lightbulb: Rainbow mode, step 136[0m
+[0;32mI (255988) lightbulb: Rainbow mode, step 137[0m
+[0;32mI (257088) lightbulb: Rainbow mode, step 138[0m
+[0;32mI (258188) lightbulb: Rainbow mode, step 139[0m
+[0;32mI (259288) lightbulb: Rainbow mode, step 140[0m
+[0;32mI (260388) lightbulb: Rainbow mode, step 141[0m
+[0;32mI (261488) lightbulb: Rainbow mode, step 142[0m
+[0;32mI (262588) lightbulb: Rainbow mode, step 143[0m
+[0;32mI (263688) lightbulb: Rainbow mode, step 144[0m
+[0;32mI (264788) lightbulb: Rainbow mode, step 145[0m
+[0;32mI (265888) lightbulb: Rainbow mode, step 146[0m
+[0;32mI (266988) lightbulb: Rainbow mode, step 147[0m
+[0;32mI (268088) lightbulb: Rainbow mode, step 148[0m
+[0;32mI (269188) lightbulb: Rainbow mode, step 149[0m
+[0;32mI (270288) lightbulb: Rainbow mode, step 150[0m
+[0;32mI (271388) lightbulb: Rainbow mode, step 151[0m
+[0;32mI (272488) lightbulb: Rainbow mode, step 152[0m
+[0;32mI (273588) lightbulb: Rainbow mode, step 153[0m
+[0;32mI (274688) lightbulb: Rainbow mode, step 154[0m
+[0;32mI (275788) lightbulb: Rainbow mode, step 155[0m
+[0;32mI (276888) lightbulb: Rainbow mode, step 156[0m
+[0;32mI (277988) lightbulb: Rainbow mode, step 157[0m
+[0;32mI (279088) lightbulb: Rainbow mode, step 158[0m
+[0;32mI (280188) lightbulb: Rainbow mode, step 159[0m
+[0;32mI (281288) lightbulb: Rainbow mode, step 160[0m
+[0;32mI (282388) lightbulb: Rainbow mode, step 161[0m
+[0;32mI (283488) lightbulb: Rainbow mode, step 162[0m
+[0;32mI (284588) lightbulb: Rainbow mode, step 163[0m
+[0;32mI (285688) lightbulb: Rainbow mode, step 164[0m
+[0;32mI (286788) lightbulb: Rainbow mode, step 165[0m
+[0;32mI (287888) lightbulb: Rainbow mode, step 166[0m
+[0;32mI (288988) lightbulb: Rainbow mode, step 167[0m
+[0;32mI (290088) lightbulb: Rainbow mode, step 168[0m
+[0;32mI (291188) lightbulb: Rainbow mode, step 169[0m
+[0;32mI (292288) lightbulb: Rainbow mode, step 170[0m
+[0;32mI (293388) lightbulb: Rainbow mode, step 171[0m
+[0;32mI (294488) lightbulb: Rainbow mode, step 172[0m
+[0;32mI (295588) lightbulb: Rainbow mode, step 173[0m
+[0;32mI (296688) lightbulb: Rainbow mode, step 174[0m
+[0;32mI (297788) lightbulb: Rainbow mode, step 175[0m
+[0;32mI (298888) lightbulb: Rainbow mode, step 176[0m
+[0;32mI (299988) lightbulb: Rainbow mode, step 177[0m
+[0;32mI (301088) lightbulb: Rainbow mode, step 178[0m
+[0;32mI (302188) lightbulb: Rainbow mode, step 179[0m
+[0;32mI (303288) lightbulb: Rainbow mode, step 180[0m
+[0;32mI (304388) lightbulb: Rainbow mode, step 181[0m
+[0;32mI (305488) lightbulb: Rainbow mode, step 182[0m
+[0;32mI (306588) lightbulb: Rainbow mode, step 183[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[0;32mI (307618) lightbulb: Rainbow mode, step 184[0m
+[0;32mI (308718) lightbulb: Rainbow mode, step 185[0m
+[0;32mI (309818) lightbulb: Rainbow mode, step 186[0m
+[0;32mI (310918) lightbulb: Rainbow mode, step 187[0m
+[0;32mI (312018) lightbulb: Rainbow mode, step 188[0m
+[0;32mI (313118) lightbulb: Rainbow mode, step 189[0m
+[0;32mI (314218) lightbulb: Rainbow mode, step 190[0m
+[0;32mI (315318) lightbulb: Rainbow mode, step 191[0m
+[0;32mI (316418) lightbulb: Rainbow mode, step 192[0m
+[0;32mI (317518) lightbulb: Rainbow mode, step 193[0m
+[0;32mI (318618) lightbulb: Rainbow mode, step 194[0m
+[0;32mI (319718) lightbulb: Rainbow mode, step 195[0m
+[0;32mI (320818) lightbulb: Rainbow mode, step 196[0m
+[0;32mI (321918) lightbulb: Rainbow mode, step 197[0m
+[0;32mI (323018) lightbulb: Rainbow mode, step 198[0m
+[0;32mI (324118) lightbulb: Rainbow mode, step 199[0m
+[0;32mI (325218) lightbulb: Rainbow mode, step 200[0m
+[0;32mI (326318) lightbulb: Rainbow mode, step 201[0m
+[0;32mI (327418) lightbulb: Rainbow mode, step 202[0m
+[0;32mI (328518) lightbulb: Rainbow mode, step 203[0m
+[0;32mI (329618) lightbulb: Rainbow mode, step 204[0m
+[0;32mI (330718) lightbulb: Rainbow mode, step 205[0m
+[0;32mI (331818) lightbulb: Rainbow mode, step 206[0m
+[0;32mI (332918) lightbulb: Rainbow mode, step 207[0m
+[0;32mI (334018) lightbulb: Rainbow mode, step 208[0m
+[0;32mI (335118) lightbulb: Rainbow mode, step 209[0m
+[0;32mI (336218) lightbulb: Rainbow mode, step 210[0m
+[0;32mI (337318) lightbulb: Rainbow mode, step 211[0m
+[0;32mI (338418) lightbulb: Rainbow mode, step 212[0m
+[0;32mI (339518) lightbulb: Rainbow mode, step 213[0m
+[0;32mI (340618) lightbulb: Rainbow mode, step 214[0m
+[0;32mI (341718) lightbulb: Rainbow mode, step 215[0m
+[0;32mI (342818) lightbulb: Rainbow mode, step 216[0m
+[0;32mI (343918) lightbulb: Rainbow mode, step 217[0m
+[0;32mI (345018) lightbulb: Rainbow mode, step 218[0m
+[0;32mI (346118) lightbulb: Rainbow mode, step 219[0m
+[0;32mI (347218) lightbulb: Rainbow mode, step 220[0m
+[0;32mI (348318) lightbulb: Rainbow mode, step 221[0m
+[0;32mI (349418) lightbulb: Rainbow mode, step 222[0m
+[0;32mI (350518) lightbulb: Rainbow mode, step 223[0m
+[0;32mI (351618) lightbulb: Rainbow mode, step 224[0m
+[0;32mI (352718) lightbulb: Rainbow mode, step 225[0m
+[0;32mI (353818) lightbulb: Rainbow mode, step 226[0m
+[0;32mI (354918) lightbulb: Rainbow mode, step 227[0m
+[0;32mI (356018) lightbulb: Rainbow mode, step 228[0m
+[0;32mI (357118) lightbulb: Rainbow mode, step 229[0m
+[0;32mI (358218) lightbulb: Rainbow mode, step 230[0m
+[0;32mI (359318) lightbulb: Rainbow mode, step 231[0m
+[0;32mI (360418) lightbulb: Rainbow mode, step 232[0m
+[0;32mI (361518) lightbulb: Rainbow mode, step 233[0m
+[0;32mI (362618) lightbulb: Rainbow mode, step 234[0m
+[0;32mI (363718) lightbulb: Rainbow mode, step 235[0m
+[0;32mI (364818) lightbulb: Rainbow mode, step 236[0m
+[0;32mI (365918) lightbulb: Rainbow mode, step 237[0m
+[0;32mI (367018) lightbulb: Rainbow mode, step 238[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[0;32mI (368028) lightbulb: Rainbow mode, step 239[0m
+[0;32mI (369128) lightbulb: Rainbow mode, step 240[0m
+[0;32mI (370228) lightbulb: Rainbow mode, step 241[0m
+[0;32mI (371328) lightbulb: Rainbow mode, step 242[0m
+[0;32mI (372428) lightbulb: Rainbow mode, step 243[0m
+[0;32mI (373528) lightbulb: Rainbow mode, step 244[0m
+[0;32mI (374628) lightbulb: Rainbow mode, step 245[0m
+[0;32mI (375728) lightbulb: Rainbow mode, step 246[0m
+[0;32mI (376828) lightbulb: Rainbow mode, step 247[0m
+[0;32mI (377928) lightbulb: Rainbow mode, step 248[0m
+[0;32mI (379028) lightbulb: Rainbow mode, step 249[0m
+[0;32mI (380128) lightbulb: Rainbow mode, step 250[0m
+[0;32mI (381228) lightbulb: Rainbow mode, step 251[0m
+[0;32mI (382328) lightbulb: Rainbow mode, step 252[0m
+[0;32mI (383428) lightbulb: Rainbow mode, step 253[0m
+[0;32mI (384528) lightbulb: Rainbow mode, step 254[0m
+[0;32mI (385628) lightbulb: Rainbow mode, step 255[0m
+[0;32mI (386728) lightbulb: Rainbow mode, step 256[0m
+[0;32mI (387828) lightbulb: Rainbow mode, step 257[0m
+[0;32mI (388928) lightbulb: Rainbow mode, step 258[0m
+[0;32mI (390028) lightbulb: Rainbow mode, step 259[0m
+[0;32mI (391128) lightbulb: Rainbow mode, step 260[0m
+[0;32mI (392228) lightbulb: Rainbow mode, step 261[0m
+[0;32mI (393328) lightbulb: Rainbow mode, step 262[0m
+[0;32mI (394328) lightbulb: Rainbow mode, step 263[0m
+[0;32mI (395428) lightbulb: Rainbow mode, step 264[0m
+[0;32mI (396528) lightbulb: Rainbow mode, step 265[0m
+[0;32mI (397628) lightbulb: Rainbow mode, step 266[0m
+[0;32mI (398728) lightbulb: Rainbow mode, step 267[0m

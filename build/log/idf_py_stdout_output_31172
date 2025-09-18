@@ -1,0 +1,41 @@
+Command: ninja all
+[1/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lightbulb.c.obj
+[2/9] Linking C static library esp-idf/main/libmain.a
+[3/9] Generating esp-idf/esp_system/ld/sections.ld
+[4/9] Linking CXX executable lightbulb.elf
+[5/9] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.bin
+[6/9] cd /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/esp-idf/esptool_py && /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/partition_table/partition-table.bin /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.bin
+lightbulb.bin binary size 0x17e580 bytes. Smallest app partition is 0x190000 bytes. 0x11a80 bytes (4%) free.
+Warning: The smallest app partition is nearly full (4% free space left)!
+[7/9] Performing build step for 'bootloader'
+[0/1] Re-running CMake...
+-- Minimal build - OFF
+-- Building ESP-IDF components for target esp32c3
+-- Project sdkconfig file /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/sdkconfig
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/riscv/ld/rom.api.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/soc/esp32c3/ld/esp32c3.peripherals.ld
+-- Bootloader project name: "bootloader" version: 1
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.api.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.bt_funcs.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.libgcc.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.version.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.libc.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.libc-suboptimal_for_misaligned_mem.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.newlib.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/bootloader/subproject/main/ld/esp32c3/bootloader.ld
+-- Adding linker script /mnt/c/work/esp32/esp-idf/components/bootloader/subproject/main/ld/esp32c3/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_bootloader_format esp_common esp_hw_support esp_rom esp_security esp_system esptool_py freertos hal log main micro-ecc newlib partition_table riscv soc spi_flash
+-- Component paths: /mnt/c/work/esp32/esp-idf/components/bootloader /mnt/c/work/esp32/esp-idf/components/bootloader_support /mnt/c/work/esp32/esp-idf/components/efuse /mnt/c/work/esp32/esp-idf/components/esp_app_format /mnt/c/work/esp32/esp-idf/components/esp_bootloader_format /mnt/c/work/esp32/esp-idf/components/esp_common /mnt/c/work/esp32/esp-idf/components/esp_hw_support /mnt/c/work/esp32/esp-idf/components/esp_rom /mnt/c/work/esp32/esp-idf/components/esp_security /mnt/c/work/esp32/esp-idf/components/esp_system /mnt/c/work/esp32/esp-idf/components/esptool_py /mnt/c/work/esp32/esp-idf/components/freertos /mnt/c/work/esp32/esp-idf/components/hal /mnt/c/work/esp32/esp-idf/components/log /mnt/c/work/esp32/esp-idf/components/bootloader/subproject/main /mnt/c/work/esp32/esp-idf/components/bootloader/subproject/components/micro-ecc /mnt/c/work/esp32/esp-idf/components/newlib /mnt/c/work/esp32/esp-idf/components/partition_table /mnt/c/work/esp32/esp-idf/components/riscv /mnt/c/work/esp32/esp-idf/components/soc /mnt/c/work/esp32/esp-idf/components/spi_flash
+-- Configuring done (119.7s)
+-- Generating done (3.0s)
+-- Build files have been written to: /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader
+[1/1] cd /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/esp-idf/esptool_py && /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[8/9] No install step for 'bootloader'
+[9/9] Completed 'bootloader'

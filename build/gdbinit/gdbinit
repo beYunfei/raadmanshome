@@ -1,0 +1,2 @@
+source /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/gdbinit/symbols
+source /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/gdbinit/connect

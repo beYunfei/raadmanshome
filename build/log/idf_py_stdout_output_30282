@@ -1,0 +1,661 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403899ce
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (16) boot: compile time Jun 27 2025 09:47:03[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (72) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (85) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3bc3ch (244796) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0005bc64 vaddr=3fc9ac00 size=03e5ch ( 15964) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0005fac8 vaddr=40380000 size=00550h (  1360) load[0m
+[0;32mI (152) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=12447ch (1197180) map[0m
+[0;32mI (350) esp_image: segment 4: paddr=001844a4 vaddr=40380550 size=1a4a8h (107688) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=0019e954 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (378) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (379) boot: Disabling RNG early entropy source...[0m
+[0;32mI (389) cpu_start: Unicore app[0m
+[0;32mI (397) cpu_start: Pro cpu start user code[0m
+[0;32mI (397) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (397) app_init: Project name:     lightbulb[0m
+[0;32mI (401) app_init: App version:      bfbcd6e-dirty[0m
+[0;32mI (406) app_init: Compile time:     Jun 27 2025 09:40:50[0m
+[0;32mI (411) app_init: ELF file SHA256:  2836160fe...[0m
+[0;32mI (415) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c[0m
+[0;32mI (420) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (424) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (428) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (432) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (438) heap_init: At 3FCA5F50 len 0001A0B0 (104 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (450) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (456) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (462) spi_flash: detected chip: boya[0m
+[0;32mI (464) spi_flash: flash io: dio[0m
+[0;32mI (468) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (474) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (480) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (485) coexist: coexist rom version 9387209[0m
+[0;32mI (489) main_task: Started on CPU0[0m
+[0;32mI (489) main_task: Calling app_main()[0m
+[0;32mI (499) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 27[0m
+[1;37mDatabase initialised. Accessory Device ID: FB:FD:7C:F2:69:05[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (569) lightbulb: Dummy Light Driver Init.[0m
+[0;32mI (569) lightbulb: Default color set: R=255, G=144, B=58[0m
+[1;31mE (569) esp_hap_setup_payload: Setup code or Setup ID not correct. Eg. 111-22-333, ES32[0m
+[1;32mMFi auth not supported. Falling back to HAP_MFI_AUTH_NONE[0m
+[0;32mI (589) pp: pp rom version: 9387209[0m
+[0;32mI (589) net80211: net80211 rom version: 9387209[0m
+[0;32mI (609) wifi:wifi driver task: 3fcb0798, prio:23, stack:6656, core=0[0m
+[0;32mI (609) wifi:wifi firmware version: 2dcd4f5[0m
+[0;32mI (609) wifi:wifi certification version: v7.0[0m
+[0;32mI (609) wifi:config NVS flash: enabled[0m
+[0;32mI (609) wifi:config nano formatting: disabled[0m
+[0;32mI (619) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (619) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (629) wifi:Init management short buffer num: 32[0m
+[0;32mI (629) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (629) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (639) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (639) wifi:Init static rx buffer num: 10[0m
+[0;32mI (649) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (649) wifi_init: rx ba win: 6[0m
+[0;32mI (649) wifi_init: accept mbox: 6[0m
+[0;32mI (659) wifi_init: tcpip mbox: 32[0m
+[0;32mI (659) wifi_init: udp mbox: 10[0m
+[0;32mI (659) wifi_init: tcp mbox: 6[0m
+[0;32mI (659) wifi_init: tcp tx win: 5760[0m
+[0;32mI (669) wifi_init: tcp rx win: 5760[0m
+[0;32mI (669) wifi_init: tcp mss: 1440[0m
+[0;32mI (669) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (679) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;37mSetup ID: Hoa6[0m
+[1;37mHAP Main Loop Started[0m
+[0;32mI (689) mdns_mem: mDNS task will be created from internal RAM[0m
+[1;37mmDNS initialised[0m
+[1;37mRegistering HomeKit web handlers[0m
+[1;37mAnnouncing _hap._tcp mDNS service[0m
+[1;37mHAP Started[0m
+[0;32mI (699) wifi_prov_scheme_ble: BT memory released[0m
+[0;32mI (709) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (709) wifi_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (719) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (759) wifi:mode : sta (34:cd:b0:51:43:18)[0m
+[0;32mI (759) wifi:enable tsf[0m
+[0;32mI (3169) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3179) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3189) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3189) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3219) wifi:connected with #Telia-3134A8, aid = 5, channel 1, BW20, bssid = e4:c0:e2:31:34:ae[0m
+[0;32mI (3219) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (3219) wifi:pm start, type: 1[0m
+
+[0;32mI (3219) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3229) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3309) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3829) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4589) app_wifi: Connected with IPv6 Address:fe80:0000:0000:0000:36cd:b0ff:fe51:4318[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[0;32mI (10989) esp_netif_handlers: sta ip: 192.168.1.128, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (10989) app_wifi: Connected with IP Address:192.168.1.128[0m
+[0;32mI (16429) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (16429) lightbulb: lightbulb_set_on : false[0m
+[1;37mValue Changed[0m
+[0;32mI (17139) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (17139) lightbulb: lightbulb_set_on : true[0m
+[0;32mI (17139) lightbulb: lightbulb_set_brightness : 100[0m
+[1;37mValue Changed[0m
+[0;32mI (17139) lightbulb: Scaled color: R=255, G=144, B=58[0m
+[0;32mI (17959) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (17959) lightbulb: lightbulb_set_on : false[0m
+[0;32mI (17959) lightbulb: lightbulb_set_brightness : 0[0m
+[1;37mValue Changed[0m
+[0;32mI (18679) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (18679) lightbulb: lightbulb_set_on : true[0m
+[0;32mI (18679) lightbulb: lightbulb_set_brightness : 100[0m
+[1;37mValue Changed[0m
+[0;32mI (18679) lightbulb: Scaled color: R=255, G=144, B=58[0m
+[0;32mI (21649) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (21649) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (21649) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (21659) HAP lightbulb: Received Write for Light Hue 255.000000[0m
+[0;32mI (21659) lightbulb: lightbulb_set_hue : 255.000000[0m
+[0;32mI (21669) lightbulb: New color: R=107, G=58, B=255[0m
+[0;32mI (21669) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (21679) lightbulb: Scaled color: R=107, G=58, B=255[0m
+[1;37mValue Changed[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (22249) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (22249) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (22249) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (22569) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (22569) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (22569) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (22579) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (22589) lightbulb: lightbulb_set_hue : 30.000000[0m
+[0;32mI (22589) lightbulb: New color: R=255, G=156, B=58[0m
+[0;32mI (22589) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (22599) lightbulb: Scaled color: R=255, G=156, B=58[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (22659) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (22659) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (22659) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (24209) HAP lightbulb: Received Write for Light Saturation 48.000000[0m
+[0;32mI (24219) lightbulb: lightbulb_set_saturation : 48.000000[0m
+[1;31mE (24219) lightbulb: Invalid saturation value: 48.000000, must be between 0.0 and 1.0[0m
+[0;32mI (24219) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (24229) lightbulb: lightbulb_set_hue : 30.000000[0m
+[0;32mI (24229) lightbulb: New color: R=255, G=156, B=58[0m
+[0;32mI (24239) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (24239) lightbulb: Scaled color: R=255, G=156, B=58[0m
+[0;32mI (24409) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (24409) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (24409) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (24419) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (24429) lightbulb: lightbulb_set_hue : 30.000000[0m
+[0;32mI (24429) lightbulb: New color: R=255, G=156, B=58[0m
+[0;32mI (24439) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (24439) lightbulb: Scaled color: R=255, G=156, B=58[0m
+[0;32mI (24459) HAP lightbulb: Received Write for Light Saturation 48.000000[0m
+[0;32mI (24459) lightbulb: lightbulb_set_saturation : 48.000000[0m
+[1;31mE (24459) lightbulb: Invalid saturation value: 48.000000, must be between 0.0 and 1.0[0m
+[0;32mI (24479) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (24479) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (24479) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m
+[0;32mI (34859) HAP lightbulb: Received Write for Light Saturation 98.000000[0m
+[0;32mI (34859) lightbulb: lightbulb_set_saturation : 98.000000[0m
+[1;31mE (34859) lightbulb: Invalid saturation value: 98.000000, must be between 0.0 and 1.0[0m
+[0;32mI (34869) HAP lightbulb: Received Write for Light Hue 34.000000[0m
+[0;32mI (34869) lightbulb: lightbulb_set_hue : 34.000000[0m
+[0;32mI (34879) lightbulb: New color: R=255, G=169, B=58[0m
+[0;32mI (34879) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (34879) lightbulb: Scaled color: R=255, G=169, B=58[0m
+[1;37mValue Changed[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[0;32mI (35059) HAP lightbulb: Received Write for Light Saturation 16.000000[0m
+[0;32mI (35059) lightbulb: lightbulb_set_saturation : 16.000000[0m
+[1;31mE (35059) lightbulb: Invalid saturation value: 16.000000, must be between 0.0 and 1.0[0m
+[0;32mI (35059) HAP lightbulb: Received Write for Light Hue 67.000000[0m
+[0;32mI (35069) lightbulb: lightbulb_set_hue : 67.000000[0m
+[0;32mI (35079) lightbulb: New color: R=232, G=255, B=58[0m
+[0;32mI (35079) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (35079) lightbulb: Scaled color: R=232, G=255, B=58[0m
+[1;37mValue Changed[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[0;32mI (35189) HAP lightbulb: Received Write for Light Saturation 98.000000[0m
+[0;32mI (35189) lightbulb: lightbulb_set_saturation : 98.000000[0m
+[1;31mE (35189) lightbulb: Invalid saturation value: 98.000000, must be between 0.0 and 1.0[0m
+[0;32mI (35209) HAP lightbulb: Received Write for Light Saturation 16.000000[0m
+[0;32mI (35219) lightbulb: lightbulb_set_saturation : 16.000000[0m
+[1;31mE (35219) lightbulb: Invalid saturation value: 16.000000, must be between 0.0 and 1.0[0m
+[0;32mI (35239) HAP lightbulb: Received Write for Light Saturation 55.000000[0m
+[0;32mI (35239) lightbulb: lightbulb_set_saturation : 55.000000[0m
+[1;31mE (35239) lightbulb: Invalid saturation value: 55.000000, must be between 0.0 and 1.0[0m
+[0;32mI (35239) HAP lightbulb: Received Write for Light Hue 137.000000[0m
+[0;32mI (35249) lightbulb: lightbulb_set_hue : 137.000000[0m
+[0;32mI (35249) lightbulb: New color: R=58, G=255, B=114[0m
+[0;32mI (35259) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (35259) lightbulb: Scaled color: R=58, G=255, B=114[0m
+[1;37mValue Changed[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (35329) HAP lightbulb: Received Write for Light Saturation 55.000000[0m
+[0;32mI (35329) lightbulb: lightbulb_set_saturation : 55.000000[0m
+[1;31mE (35329) lightbulb: Invalid saturation value: 55.000000, must be between 0.0 and 1.0[0m
+[0;32mI (35569) HAP lightbulb: Received Write for Light Saturation 100.000000[0m
+[0;32mI (35579) lightbulb: lightbulb_set_saturation : 100.000000[0m
+[1;31mE (35579) lightbulb: Invalid saturation value: 100.000000, must be between 0.0 and 1.0[0m
+[0;32mI (35579) HAP lightbulb: Received Write for Light Hue 129.000000[0m
+[0;32mI (35589) lightbulb: lightbulb_set_hue : 129.000000[0m
+[0;32mI (35589) lightbulb: New color: R=58, G=255, B=88[0m
+[0;32mI (35599) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (35599) lightbulb: Scaled color: R=58, G=255, B=88[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (35639) HAP lightbulb: Received Write for Light Saturation 100.000000[0m
+[0;32mI (35639) lightbulb: lightbulb_set_saturation : 100.000000[0m
+[1;31mE (35639) lightbulb: Invalid saturation value: 100.000000, must be between 0.0 and 1.0[0m
+[0;32mI (35779) HAP lightbulb: Received Write for Light Saturation 73.000000[0m
+[0;32mI (35779) lightbulb: lightbulb_set_saturation : 73.000000[0m
+[1;31mE (35779) lightbulb: Invalid saturation value: 73.000000, must be between 0.0 and 1.0[0m
+[0;32mI (35789) HAP lightbulb: Received Write for Light Hue 162.000000[0m
+[0;32mI (35789) lightbulb: lightbulb_set_hue : 162.000000[0m
+[0;32mI (35799) lightbulb: New color: R=58, G=255, B=196[0m
+[0;32mI (35799) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (35809) lightbulb: Scaled color: R=58, G=255, B=196[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (35859) HAP lightbulb: Received Write for Light Saturation 73.000000[0m
+[0;32mI (35859) lightbulb: lightbulb_set_saturation : 73.000000[0m
+[1;31mE (35859) lightbulb: Invalid saturation value: 73.000000, must be between 0.0 and 1.0[0m
+[0;32mI (36089) HAP lightbulb: Received Write for Light Saturation 61.000000[0m
+[0;32mI (36089) lightbulb: lightbulb_set_saturation : 61.000000[0m
+[1;31mE (36089) lightbulb: Invalid saturation value: 61.000000, must be between 0.0 and 1.0[0m
+[0;32mI (36089) HAP lightbulb: Received Write for Light Hue 208.000000[0m
+[0;32mI (36099) lightbulb: lightbulb_set_hue : 208.000000[0m
+[0;32mI (36099) lightbulb: New color: R=58, G=163, B=255[0m
+[0;32mI (36109) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (36109) lightbulb: Scaled color: R=58, G=163, B=255[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (36159) HAP lightbulb: Received Write for Light Saturation 61.000000[0m
+[0;32mI (36159) lightbulb: lightbulb_set_saturation : 61.000000[0m
+[1;31mE (36159) lightbulb: Invalid saturation value: 61.000000, must be between 0.0 and 1.0[0m
+[0;32mI (36289) HAP lightbulb: Received Write for Light Saturation 71.000000[0m
+[0;32mI (36289) lightbulb: lightbulb_set_saturation : 71.000000[0m
+[1;31mE (36289) lightbulb: Invalid saturation value: 71.000000, must be between 0.0 and 1.0[0m
+[0;32mI (36299) HAP lightbulb: Received Write for Light Hue 253.000000[0m
+[0;32mI (36309) lightbulb: lightbulb_set_hue : 253.000000[0m
+[0;32mI (36309) lightbulb: New color: R=101, G=58, B=255[0m
+[0;32mI (36309) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (36319) lightbulb: Scaled color: R=101, G=58, B=255[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (36359) HAP lightbulb: Received Write for Light Saturation 71.000000[0m
+[0;32mI (36359) lightbulb: lightbulb_set_saturation : 71.000000[0m
+[1;31mE (36359) lightbulb: Invalid saturation value: 71.000000, must be between 0.0 and 1.0[0m
+[0;32mI (36599) HAP lightbulb: Received Write for Light Saturation 30.000000[0m
+[0;32mI (36599) lightbulb: lightbulb_set_saturation : 30.000000[0m
+[1;31mE (36599) lightbulb: Invalid saturation value: 30.000000, must be between 0.0 and 1.0[0m
+[0;32mI (36609) HAP lightbulb: Received Write for Light Hue 315.000000[0m
+[0;32mI (36609) lightbulb: lightbulb_set_hue : 315.000000[0m
+[0;32mI (36619) lightbulb: New color: R=255, G=58, B=205[0m
+[0;32mI (36619) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (36629) lightbulb: Scaled color: R=255, G=58, B=205[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (36679) HAP lightbulb: Received Write for Light Saturation 30.000000[0m
+[0;32mI (36679) lightbulb: lightbulb_set_saturation : 30.000000[0m
+[1;31mE (36679) lightbulb: Invalid saturation value: 30.000000, must be between 0.0 and 1.0[0m
+[0;32mI (36799) HAP lightbulb: Received Write for Light Saturation 29.000000[0m
+[0;32mI (36799) lightbulb: lightbulb_set_saturation : 29.000000[0m
+[1;31mE (36799) lightbulb: Invalid saturation value: 29.000000, must be between 0.0 and 1.0[0m
+[0;32mI (36809) HAP lightbulb: Received Write for Light Hue 217.000000[0m
+[0;32mI (36819) lightbulb: lightbulb_set_hue : 217.000000[0m
+[0;32mI (36819) lightbulb: New color: R=58, G=133, B=255[0m
+[0;32mI (36829) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (36829) lightbulb: Scaled color: R=58, G=133, B=255[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (36869) HAP lightbulb: Received Write for Light Saturation 29.000000[0m
+[0;32mI (36869) lightbulb: lightbulb_set_saturation : 29.000000[0m
+[1;31mE (36869) lightbulb: Invalid saturation value: 29.000000, must be between 0.0 and 1.0[0m
+[0;32mI (37109) HAP lightbulb: Received Write for Light Saturation 14.000000[0m
+[0;32mI (37109) lightbulb: lightbulb_set_saturation : 14.000000[0m
+[1;31mE (37109) lightbulb: Invalid saturation value: 14.000000, must be between 0.0 and 1.0[0m
+[0;32mI (37119) HAP lightbulb: Received Write for Light Hue 322.000000[0m
+[0;32mI (37119) lightbulb: lightbulb_set_hue : 322.000000[0m
+[0;32mI (37129) lightbulb: New color: R=255, G=58, B=183[0m
+[0;32mI (37129) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (37139) lightbulb: Scaled color: R=255, G=58, B=183[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (37179) HAP lightbulb: Received Write for Light Saturation 14.000000[0m
+[0;32mI (37179) lightbulb: lightbulb_set_saturation : 14.000000[0m
+[1;31mE (37179) lightbulb: Invalid saturation value: 14.000000, must be between 0.0 and 1.0[0m
+[0;32mI (37309) HAP lightbulb: Received Write for Light Saturation 16.000000[0m
+[0;32mI (37319) lightbulb: lightbulb_set_saturation : 16.000000[0m
+[1;31mE (37319) lightbulb: Invalid saturation value: 16.000000, must be between 0.0 and 1.0[0m
+[0;32mI (37319) HAP lightbulb: Received Write for Light Hue 178.000000[0m
+[0;32mI (37329) lightbulb: lightbulb_set_hue : 178.000000[0m
+[0;32mI (37329) lightbulb: New color: R=58, G=255, B=248[0m
+[0;32mI (37339) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (37339) lightbulb: Scaled color: R=58, G=255, B=248[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (37559) HAP lightbulb: Received Write for Light Saturation 16.000000[0m
+[0;32mI (37559) lightbulb: lightbulb_set_saturation : 16.000000[0m
+[1;31mE (37559) lightbulb: Invalid saturation value: 16.000000, must be between 0.0 and 1.0[0m
+[0;32mI (37569) HAP lightbulb: Received Write for Light Saturation 71.000000[0m
+[0;32mI (37579) lightbulb: lightbulb_set_saturation : 71.000000[0m
+[1;31mE (37579) lightbulb: Invalid saturation value: 71.000000, must be between 0.0 and 1.0[0m
+[0;32mI (37579) HAP lightbulb: Received Write for Light Hue 272.000000[0m
+[0;32mI (37589) lightbulb: lightbulb_set_hue : 272.000000[0m
+[0;32mI (37589) lightbulb: New color: R=163, G=58, B=255[0m
+[0;32mI (37599) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (37599) lightbulb: Scaled color: R=163, G=58, B=255[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (37649) HAP lightbulb: Received Write for Light Saturation 71.000000[0m
+[0;32mI (37649) lightbulb: lightbulb_set_saturation : 71.000000[0m
+[1;31mE (37649) lightbulb: Invalid saturation value: 71.000000, must be between 0.0 and 1.0[0m
+[0;32mI (37829) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (37829) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (37829) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (37839) HAP lightbulb: Received Write for Light Hue 350.000000[0m
+[0;32mI (37839) lightbulb: lightbulb_set_hue : 350.000000[0m
+[0;32mI (37849) lightbulb: New color: R=255, G=58, B=91[0m
+[0;32mI (37849) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (37859) lightbulb: Scaled color: R=255, G=58, B=91[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (37899) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (37899) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (37899) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (38139) HAP lightbulb: Received Write for Light Saturation 26.000000[0m
+[0;32mI (38139) lightbulb: lightbulb_set_saturation : 26.000000[0m
+[1;31mE (38139) lightbulb: Invalid saturation value: 26.000000, must be between 0.0 and 1.0[0m
+[0;32mI (38139) HAP lightbulb: Received Write for Light Hue 80.000000[0m
+[0;32mI (38149) lightbulb: lightbulb_set_hue : 80.000000[0m
+[0;32mI (38149) lightbulb: New color: R=189, G=255, B=58[0m
+[0;32mI (38159) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (38159) lightbulb: Scaled color: R=189, G=255, B=58[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (38209) HAP lightbulb: Received Write for Light Saturation 26.000000[0m
+[0;32mI (38209) lightbulb: lightbulb_set_saturation : 26.000000[0m
+[1;31mE (38209) lightbulb: Invalid saturation value: 26.000000, must be between 0.0 and 1.0[0m
+[0;32mI (38439) HAP lightbulb: Received Write for Light Saturation 66.000000[0m
+[0;32mI (38439) lightbulb: lightbulb_set_saturation : 66.000000[0m
+[1;31mE (38439) lightbulb: Invalid saturation value: 66.000000, must be between 0.0 and 1.0[0m
+[0;32mI (38449) HAP lightbulb: Received Write for Light Hue 109.000000[0m
+[0;32mI (38459) lightbulb: lightbulb_set_hue : 109.000000[0m
+[0;32mI (38459) lightbulb: New color: R=94, G=255, B=58[0m
+[0;32mI (38469) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (38469) lightbulb: Scaled color: R=94, G=255, B=58[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (38529) HAP lightbulb: Received Write for Light Saturation 66.000000[0m
+[0;32mI (38529) lightbulb: lightbulb_set_saturation : 66.000000[0m
+[1;31mE (38529) lightbulb: Invalid saturation value: 66.000000, must be between 0.0 and 1.0[0m
+[0;32mI (38649) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (38649) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (38649) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (38649) HAP lightbulb: Received Write for Light Hue 115.000000[0m
+[0;32mI (38659) lightbulb: lightbulb_set_hue : 115.000000[0m
+[0;32mI (38659) lightbulb: New color: R=75, G=255, B=58[0m
+[0;32mI (38669) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (38669) lightbulb: Scaled color: R=75, G=255, B=58[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (38709) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (38709) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (38709) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (39159) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (39159) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (39159) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (39169) HAP lightbulb: Received Write for Light Hue 115.000000[0m
+[0;32mI (39169) lightbulb: lightbulb_set_hue : 115.000000[0m
+[0;32mI (39179) lightbulb: New color: R=75, G=255, B=58[0m
+[0;32mI (39179) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (39189) lightbulb: Scaled color: R=75, G=255, B=58[0m
+[0;32mI (39219) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (39219) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (39219) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (40899) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (40899) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (40899) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (40909) HAP lightbulb: Received Write for Light Hue 115.000000[0m
+[0;32mI (40909) lightbulb: lightbulb_set_hue : 115.000000[0m
+[0;32mI (40919) lightbulb: New color: R=75, G=255, B=58[0m
+[0;32mI (40919) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (40929) lightbulb: Scaled color: R=75, G=255, B=58[0m
+[0;32mI (40929) HAP lightbulb: Received Write for Light Brightness 52[0m
+[0;32mI (40939) lightbulb: lightbulb_set_brightness : 52[0m
+[0;32mI (40939) lightbulb: Scaled color: R=39, G=132, B=30[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (40989) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (40989) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (40989) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (41109) HAP lightbulb: Received Write for Light Brightness 96[0m
+[0;32mI (41109) lightbulb: lightbulb_set_brightness : 96[0m
+[0;32mI (41109) lightbulb: Scaled color: R=72, G=244, B=55[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (41409) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (41409) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (41409) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (41419) HAP lightbulb: Received Write for Light Hue 115.000000[0m
+[0;32mI (41429) lightbulb: lightbulb_set_hue : 115.000000[0m
+[0;32mI (41429) lightbulb: New color: R=75, G=255, B=58[0m
+[0;32mI (41439) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (41439) lightbulb: Scaled color: R=75, G=255, B=58[0m
+[0;32mI (41439) HAP lightbulb: Received Write for Light Brightness 100[0m
+[0;32mI (41449) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (41449) lightbulb: Scaled color: R=75, G=255, B=58[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (41499) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (41499) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (41499) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (41609) HAP lightbulb: Received Write for Light Brightness 73[0m
+[0;32mI (41609) lightbulb: lightbulb_set_brightness : 73[0m
+[0;32mI (41619) lightbulb: Scaled color: R=54, G=186, B=42[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (41919) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (41919) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (41919) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (41929) HAP lightbulb: Received Write for Light Hue 115.000000[0m
+[0;32mI (41939) lightbulb: lightbulb_set_hue : 115.000000[0m
+[0;32mI (41939) lightbulb: New color: R=75, G=255, B=58[0m
+[0;32mI (41949) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (41949) lightbulb: Scaled color: R=75, G=255, B=58[0m
+[0;32mI (41949) HAP lightbulb: Received Write for Light Brightness 33[0m
+[0;32mI (41959) lightbulb: lightbulb_set_brightness : 33[0m
+[0;32mI (41959) lightbulb: Scaled color: R=24, G=84, B=19[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (42019) HAP lightbulb: Received Write for Light Saturation 89.000000[0m
+[0;32mI (42019) lightbulb: lightbulb_set_saturation : 89.000000[0m
+[1;31mE (42019) lightbulb: Invalid saturation value: 89.000000, must be between 0.0 and 1.0[0m
+[0;32mI (42079) HAP lightbulb: Received Write for Light Brightness 23[0m
+[0;32mI (42079) lightbulb: lightbulb_set_brightness : 23[0m
+[0;32mI (42079) lightbulb: Scaled color: R=17, G=58, B=13[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (42429) HAP lightbulb: Received Write for Light Brightness 100[0m
+[0;32mI (42439) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (42439) lightbulb: Scaled color: R=75, G=255, B=58[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (43869) HAP lightbulb: Received Write for Light Brightness 98[0m
+[0;32mI (43869) lightbulb: lightbulb_set_brightness : 98[0m
+[0;32mI (43869) lightbulb: Scaled color: R=73, G=249, B=56[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (44099) HAP lightbulb: Received Write for Light Brightness 77[0m
+[0;32mI (44099) lightbulb: lightbulb_set_brightness : 77[0m
+[0;32mI (44099) lightbulb: Scaled color: R=57, G=196, B=44[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (44289) HAP lightbulb: Received Write for Light Brightness 63[0m
+[0;32mI (44289) lightbulb: lightbulb_set_brightness : 63[0m
+[0;32mI (44289) lightbulb: Scaled color: R=47, G=160, B=36[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (44589) HAP lightbulb: Received Write for Light Brightness 55[0m
+[0;32mI (44589) lightbulb: lightbulb_set_brightness : 55[0m
+[0;32mI (44589) lightbulb: Scaled color: R=41, G=140, B=31[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (44889) HAP lightbulb: Received Write for Light Brightness 49[0m
+[0;32mI (44889) lightbulb: lightbulb_set_brightness : 49[0m
+[0;32mI (44889) lightbulb: Scaled color: R=36, G=124, B=28[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (45029) HAP lightbulb: Received Write for Light Brightness 40[0m
+[0;32mI (45029) lightbulb: lightbulb_set_brightness : 40[0m
+[0;32mI (45029) lightbulb: Scaled color: R=30, G=102, B=23[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (45399) HAP lightbulb: Received Write for Light Brightness 34[0m
+[0;32mI (45399) lightbulb: lightbulb_set_brightness : 34[0m
+[0;32mI (45399) lightbulb: Scaled color: R=25, G=86, B=19[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (45549) HAP lightbulb: Received Write for Light Brightness 28[0m
+[0;32mI (45549) lightbulb: lightbulb_set_brightness : 28[0m
+[0;32mI (45549) lightbulb: Scaled color: R=21, G=71, B=16[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (45909) HAP lightbulb: Received Write for Light Brightness 21[0m
+[0;32mI (45919) lightbulb: lightbulb_set_brightness : 21[0m
+[0;32mI (45919) lightbulb: Scaled color: R=15, G=53, B=12[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (46119) HAP lightbulb: Received Write for Light Brightness 10[0m
+[0;32mI (46119) lightbulb: lightbulb_set_brightness : 10[0m
+[0;32mI (46119) lightbulb: Scaled color: R=7, G=25, B=5[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (46429) HAP lightbulb: Received Write for Light Brightness 7[0m
+[0;32mI (46429) lightbulb: lightbulb_set_brightness : 7[0m
+[0;32mI (46429) lightbulb: Scaled color: R=5, G=17, B=4[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (46589) app_wifi: Connected with IPv6 Address:2001:2043:5d09:dd00:36cd:b0ff:fe51:4318[0m
+[0;32mI (46629) HAP lightbulb: Received Write for Light Brightness 6[0m
+[0;32mI (46629) lightbulb: lightbulb_set_brightness : 6[0m
+[0;32mI (46629) lightbulb: Scaled color: R=4, G=15, B=3[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[0;32mI (47039) HAP lightbulb: Received Write for Light Brightness 0[0m
+[0;32mI (47039) lightbulb: lightbulb_set_brightness : 0[0m
+[0;32mI (47039) lightbulb: Scaled color: R=0, G=0, B=0[0m
+[1;37mValue Changed[0m
+[0;32mI (47049) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (47049) lightbulb: lightbulb_set_on : false[0m
+[0;32mI (47059) lightbulb: lightbulb_set_brightness : 0[0m
+[1;37mValue Changed[0m
+[1;37mNotification Sent[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m
+[0;32mI (47659) HAP lightbulb: Received Write for Light Brightness 0[0m
+[0;32mI (47659) lightbulb: lightbulb_set_brightness : 0[0m
+[0;32mI (47659) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (47659) lightbulb: lightbulb_set_on : true[0m
+[1;37mValue Changed[0m
+[0;32mI (47659) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (47669) lightbulb: Scaled color: R=75, G=255, B=58[0m
+[0;32mI (47789) HAP lightbulb: Received Write for Light Brightness 22[0m
+[0;32mI (47789) lightbulb: lightbulb_set_brightness : 22[0m
+[0;32mI (47789) lightbulb: Scaled color: R=16, G=56, B=12[0m
+[1;37mValue Changed[0m
+[0;32mI (48679) HAP lightbulb: Received Write for Light Brightness 23[0m
+[0;32mI (48679) lightbulb: lightbulb_set_brightness : 23[0m
+[0;32mI (48679) lightbulb: Scaled color: R=17, G=58, B=13[0m
+[1;37mValue Changed[0m
+[0;32mI (48889) HAP lightbulb: Received Write for Light Brightness 37[0m
+[0;32mI (48889) lightbulb: lightbulb_set_brightness : 37[0m
+[0;32mI (48889) lightbulb: Scaled color: R=27, G=94, B=21[0m
+[1;37mValue Changed[0m
+[0;32mI (49399) HAP lightbulb: Received Write for Light Saturation 90.000000[0m
+[0;32mI (49399) lightbulb: lightbulb_set_saturation : 90.000000[0m
+[1;31mE (49399) lightbulb: Invalid saturation value: 90.000000, must be between 0.0 and 1.0[0m
+[0;32mI (49409) HAP lightbulb: Received Write for Light Hue 276.000000[0m
+[0;32mI (49409) lightbulb: lightbulb_set_hue : 276.000000[0m
+[0;32mI (49419) lightbulb: New color: R=176, G=58, B=255[0m
+[0;32mI (49419) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (49429) lightbulb: Scaled color: R=176, G=58, B=255[0m
+[1;37mValue Changed[0m
+[0;32mI (49429) HAP lightbulb: Received Write for Light Brightness 37[0m
+[0;32mI (49439) lightbulb: lightbulb_set_brightness : 37[0m
+[0;32mI (49439) lightbulb: Scaled color: R=65, G=21, B=94[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[0;32mI (49699) HAP lightbulb: Received Write for Light Saturation 90.000000[0m
+[0;32mI (49699) lightbulb: lightbulb_set_saturation : 90.000000[0m
+[1;31mE (49699) lightbulb: Invalid saturation value: 90.000000, must be between 0.0 and 1.0[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (50659) HAP lightbulb: Received Write for Light Saturation 95.000000[0m
+[0;32mI (50659) lightbulb: lightbulb_set_saturation : 95.000000[0m
+[1;31mE (50659) lightbulb: Invalid saturation value: 95.000000, must be between 0.0 and 1.0[0m
+[0;32mI (50669) HAP lightbulb: Received Write for Light Hue 4.000000[0m
+[0;32mI (50669) lightbulb: lightbulb_set_hue : 4.000000[0m
+[0;32mI (50679) lightbulb: New color: R=255, G=71, B=58[0m
+[0;32mI (50679) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (50689) lightbulb: Scaled color: R=255, G=71, B=58[0m
+[1;37mValue Changed[0m
+[0;32mI (50689) HAP lightbulb: Received Write for Light Brightness 37[0m
+[0;32mI (50699) lightbulb: lightbulb_set_brightness : 37[0m
+[0;32mI (50699) lightbulb: Scaled color: R=94, G=26, B=21[0m
+[1;37mNotification Sent[0m
+[0;32mI (50789) HAP lightbulb: Received Write for Light Saturation 95.000000[0m
+[0;32mI (50789) lightbulb: lightbulb_set_saturation : 95.000000[0m
+[1;31mE (50789) lightbulb: Invalid saturation value: 95.000000, must be between 0.0 and 1.0[0m
+[0;32mI (51339) HAP lightbulb: Received Write for Light Saturation 59.000000[0m
+[0;32mI (51339) lightbulb: lightbulb_set_saturation : 59.000000[0m
+[1;31mE (51339) lightbulb: Invalid saturation value: 59.000000, must be between 0.0 and 1.0[0m
+[0;32mI (51349) HAP lightbulb: Received Write for Light Hue 50.000000[0m
+[0;32mI (51359) lightbulb: lightbulb_set_hue : 50.000000[0m
+[0;32mI (51359) lightbulb: New color: R=255, G=222, B=58[0m
+[0;32mI (51369) lightbulb: lightbulb_set_brightness : 100[0m
+[0;32mI (51369) lightbulb: Scaled color: R=255, G=222, B=58[0m
+[1;37mValue Changed[0m
+[0;32mI (51379) HAP lightbulb: Received Write for Light Brightness 37[0m
+[0;32mI (51379) lightbulb: lightbulb_set_brightness : 37[0m
+[0;32mI (51389) lightbulb: Scaled color: R=94, G=82, B=21[0m
+[1;37mNotification Sent[0m
+[0;32mI (51549) HAP lightbulb: Received Write for Light Saturation 59.000000[0m
+[0;32mI (51559) lightbulb: lightbulb_set_saturation : 59.000000[0m
+[1;31mE (51559) lightbulb: Invalid saturation value: 59.000000, must be between 0.0 and 1.0[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m

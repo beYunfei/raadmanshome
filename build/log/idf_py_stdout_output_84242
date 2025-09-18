@@ -1,0 +1,626 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (152) esp_image: segment 1: paddr=0005c784 vaddr=3fc9ae00 sizeESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40389c44
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 27 2025 09:47:03[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3c75ch (247644) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0005c784 vaddr=3fc9ae00 size=03894h ( 14484) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=126fdch (1208284) map[0m
+[0;32mI (344) esp_image: segment 3: paddr=00187004 vaddr=3fc9e694 size=006a8h (  1704) load[0m
+[0;32mI (345) esp_image: segment 4: paddr=001876b4 vaddr=40380000 size=1ac70h (109680) load[0m
+[0;32mI (368) esp_image: segment 5: paddr=001a232c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (377) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (387) cpu_start: Unicore app[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (396) app_init: Application information:[0m
+[0;32mI (396) app_init: Project name:     lightbulb[0m
+[0;32mI (400) app_init: App version:      bfbcd6e-dirty[0m
+[0;32mI (404) app_init: Compile time:     Jun 27 2025 21:55:03[0m
+[0;32mI (409) app_init: ELF file SHA256:  99b3482fa...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c-dirty[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FCA6290 len 00019D70 (103 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 29[0m
+[1;37mDatabase initialised. Accessory Device ID: 44:16:EE:63:F2:B7[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[0;32mI (528) lightbulb: Default color set: R=255, G=144, B=58[0m
+[0;32mI (538) app_hap_setup_payload: -----QR Code for HomeKit-----[0m
+[0;32mI (538) app_hap_setup_payload: Scan this QR code from the Home app on iOS[0m
+                              
+  █▀▀▀▀▀█ ▀▀▄███▄▄▀ █▀▀▀▀▀█   
+  █ ███ █  ▀  █▄█▀  █ ███ █   
+  █ ▀▀▀ █ ██ ▄▀  █▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀▄█▄▀ █▄█ ▀▀▀▀▀▀▀   
+   ▀▀▀▀█▀▀ █▄▄▀▀▄▀▀▄ ▀▀▄▄ █   
+  █ ██ █▀▀▄ ██ ▀▀█▀██  ▀ ██   
+  ▄█▀▀ ▀▀█▀██ ▀  ██▄▀▀▀▀▄▀    
+  █ ▄  ▄▀▄ ▀  ▄█▄▀▀ ▀  ▄  █   
+  ▀  ▀▀▀▀▀█▄▄▀▀ ▄██▀▀▀█▄█▄▄   
+  █▀▀▀▀▀█ █▄███▄▀▀█ ▀ ██▀▀█   
+  █ ███ █ █▄█▄▀ █▀█▀███▀███   
+  █ ▀▀▀ █ █  █▀▀ ▀▄▀▄▄▄▄▀ █   
+  ▀▀▀▀▀▀▀   ▀ ▀ ▀▀   ▀▀▀▀▀▀   
+                              
+
+[0;32mI (648) app_hap_setup_payload: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-homekit-sdk/qrcode.html?data=X-HM://005223CQ4Hoa6
+[1;32mMFi auth not supported. Falling back to HAP_MFI_AUTH_NONE[0m
+[0;32mI (668) pp: pp rom version: 9387209[0m
+[0;32mI (678) net80211: net80211 rom version: 9387209[0m
+[0;32mI (688) wifi:wifi driver task: 3fcb1460, prio:23, stack:6656, core=0[0m
+[0;32mI (688) wifi:wifi firmware version: 2dcd4f5[0m
+[0;32mI (688) wifi:wifi certification version: v7.0[0m
+[0;32mI (688) wifi:config NVS flash: enabled[0m
+[0;32mI (698) wifi:config nano formatting: disabled[0m
+[0;32mI (698) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (708) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (708) wifi:Init management short buffer num: 32[0m
+[0;32mI (708) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (718) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (718) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (728) wifi:Init static rx buffer num: 10[0m
+[0;32mI (728) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (728) wifi_init: rx ba win: 6[0m
+[0;32mI (738) wifi_init: accept mbox: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (738) wifi_init: udp mbox: 10[0m
+[0;32mI (748) wifi_init: tcp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp tx win: 5760[0m
+[0;32mI (748) wifi_init: tcp rx win: 5760[0m
+[0;32mI (758) wifi_init: tcp mss: 1440[0m
+[0;32mI (758) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (758) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;37mSetup ID: Hoa6[0m
+[1;37mHAP Main Loop Started[0m
+[0;32mI (768) mdns_mem: mDNS task will be created from internal RAM[0m
+[1;37mmDNS initialised[0m
+[1;37mRegistering HomeKit web handlers[0m
+[1;37mAnnouncing _hap._tcp mDNS service[0m
+[1;37mHAP Started[0m
+[0;32mI (788) wifi_prov_scheme_ble: BT memory released[0m
+[0;32mI (788) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (798) wifi_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (798) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (838) wifi:mode : sta (34:cd:b0:51:43:18)[0m
+[0;32mI (838) wifi:enable tsf[0m
+[0;32mI (3248) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3248) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3268) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3268) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3288) wifi:connected with #Telia-3134A8, aid = 5, channel 1, BW20, bssid = e4:c0:e2:31:34:ae[0m
+[0;32mI (3288) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (3288) wifi:pm start, type: 1[0m
+
+[0;32mI (3298) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3298) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3318) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3348) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4668) app_wifi: Connected with IPv6 Address:fe80:0000:0000:0000:36cd:b0ff:fe51:4318[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (7668) app_wifi: Connected with IPv6 Address:2001:2043:5d09:dd00:36cd:b0ff:fe51:4318[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (11768) esp_netif_handlers: sta ip: 192.168.1.128, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (11768) app_wifi: Connected with IP Address:192.168.1.128[0m
+[0;32mI (11768) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (11768) lightbulb: ON ON ON  : false[0m
+[0;32mI (11778) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (11778) HAP lightbulb: CREATED timer handle: 0x3fca5b40[0m
+[0;32mI (11788) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (11788) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (11798) HAP lightbulb: hc is : [0m
+[0;32mI (16768) HAP lightbulb: Received Write for Light Brightness 100[0m
+[0;32mI (16768) lightbulb: lightbulb_set_brightness : 100[0m
+[1;37mValue Changed[0m
+[0;32mI (16768) HAP lightbulb: Characteristic 8 updated successfully[0m
+[0;32mI (16778) HAP lightbulb: hc is : [0m
+[0;32mI (16778) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (16788) lightbulb: ON ON ON  : true[0m
+[0;32mI (16788) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (16788) lightbulb: ON ON ON  : false[0m
+[0;32mI (16798) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (16798) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (16808) SPECIAL_DAY: Initializing SNTP[0m
+[0;32mI (16808) SPECIAL_DAY: Waiting for system time to be set... (1/10)[0m
+[0;32mI (16818) lightbulb: Received event: 3[0m
+[0;33mW (16818) lightbulb:  Refresh : 3[0m
+[0;32mI (17818) SPECIAL_DAY: System time is now synced.[0m
+[0;32mI (17818) SPECIAL_DAY: Current time: 2025-06-28 14:07:32[0m
+[0;32mI (17818) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (17818) HAP lightbulb: CREATED timer handle: 0x3fca553c[0m
+[0;32mI (17818) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (17828) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (17838) HAP lightbulb: hc is : [0m
+[0;32mI (17838) lightbulb: Received event: 1[0m
+[0;32mI (17838) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (17848) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (17848) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (22818) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (22818) lightbulb: ON ON ON  : false[0m
+[0;32mI (22818) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (22828) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (22828) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (22838) lightbulb: Received event: 0[0m
+[0;32mI (24868) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (24868) lightbulb: ON ON ON  : false[0m
+[0;32mI (24868) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (24868) HAP lightbulb: CREATED timer handle: 0x3fca5acc[0m
+[0;32mI (24868) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (24878) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (24888) HAP lightbulb: hc is : [0m
+[0;32mI (25478) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (25478) lightbulb: ON ON ON  : true[0m
+[0;32mI (25478) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (25478) HAP lightbulb: CREATED timer handle: 0x3fca5acc[0m
+[0;32mI (25488) HAP lightbulb: CREATED timer handle: 0x3fca5af0[0m
+[0;32mI (25488) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (25498) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (25498) HAP lightbulb: hc is : [0m
+[0;32mI (25508) lightbulb: Received event: 1[0m
+[0;32mI (25508) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (25508) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (25518) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (27428) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (27428) lightbulb: ON ON ON  : false[0m
+[0;32mI (27428) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (27428) HAP lightbulb: CREATED timer handle: 0x3fca5af0[0m
+[0;32mI (27428) HAP lightbulb: CREATED timer handle: 0x3fca5918[0m
+[0;32mI (27438) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (27448) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (27448) HAP lightbulb: hc is : [0m
+[0;32mI (27458) lightbulb: Received event: 0[0m
+[0;32mI (27928) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (27928) lightbulb: ON ON ON  : true[0m
+[0;32mI (27928) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (27928) HAP lightbulb: CREATED timer handle: 0x3fca5918[0m
+[0;32mI (27938) HAP lightbulb: CREATED timer handle: 0x3fca5b14[0m
+[0;32mI (27938) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (27948) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (27958) HAP lightbulb: hc is : [0m
+[0;32mI (27958) lightbulb: Received event: 1[0m
+[0;32mI (27958) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (27968) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (27968) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (29568) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (29568) lightbulb: ON ON ON  : false[0m
+[0;32mI (29568) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (29578) HAP lightbulb: CREATED timer handle: 0x3fca5b14[0m
+[0;32mI (29578) HAP lightbulb: CREATED timer handle: 0x3fca5960[0m
+[0;32mI (29588) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (29588) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (29598) HAP lightbulb: hc is : [0m
+[0;32mI (29608) lightbulb: Received event: 0[0m
+[0;32mI (29868) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (29868) lightbulb: ON ON ON  : false[0m
+[0;32mI (29868) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (29878) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (30188) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (30188) lightbulb: ON ON ON  : true[0m
+[0;32mI (30188) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (30188) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (30198) HAP lightbulb: CREATED timer handle: 0x3fca61e8[0m
+[0;32mI (30198) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (30208) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (30208) HAP lightbulb: hc is : [0m
+[0;32mI (30218) lightbulb: Received event: 1[0m
+[0;32mI (30218) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (30218) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (30228) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (30488) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (30488) lightbulb: ON ON ON  : false[0m
+[0;32mI (30488) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (30488) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (30498) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (30508) lightbulb: Received event: 0[0m
+[0;32mI (32438) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (32438) lightbulb: ON ON ON  : false[0m
+[0;32mI (32438) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (32438) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (32938) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (32948) lightbulb: ON ON ON  : false[0m
+[0;32mI (32948) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (32948) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (34588) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (34588) lightbulb: ON ON ON  : false[0m
+[0;32mI (34588) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (34588) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (35198) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (35198) lightbulb: ON ON ON  : false[0m
+[0;32mI (35198) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (35208) HAP lightbulb: Characteristic 25 updated successfully[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[0;32mI (86818) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (86818) lightbulb: ON ON ON  : false[0m
+[0;32mI (86818) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (86818) HAP lightbulb: CREATED timer handle: 0x3fca54fc[0m
+[0;32mI (86818) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (86828) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (86838) HAP lightbulb: hc is : [0m
+[0;32mI (88368) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (88368) lightbulb: ON ON ON  : true[0m
+[0;32mI (88368) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (88368) HAP lightbulb: CREATED timer handle: 0x3fca54fc[0m
+[0;32mI (88368) HAP lightbulb: CREATED timer handle: 0x3fca620c[0m
+[0;32mI (88378) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (88388) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (88388) HAP lightbulb: hc is : [0m
+[0;32mI (88398) lightbulb: Received event: 1[0m
+[0;32mI (88398) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (88398) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (88408) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (88408) lightbulb: ON ON ON  : false[0m
+[0;32mI (88418) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (88418) HAP lightbulb: CREATED timer handle: 0x3fca620c[0m
+[0;32mI (88428) HAP lightbulb: CREATED timer handle: 0x3fca6230[0m
+[0;32mI (88428) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (88438) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (88448) HAP lightbulb: hc is : [0m
+[0;32mI (88448) lightbulb: Received event: 0[0m
+[0;32mI (88758) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (88758) lightbulb: ON ON ON  : true[0m
+[0;32mI (88758) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (88758) HAP lightbulb: CREATED timer handle: 0x3fca6230[0m
+[0;32mI (88768) HAP lightbulb: CREATED timer handle: 0x3fca6254[0m
+[0;32mI (88768) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (88778) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (88788) HAP lightbulb: hc is : [0m
+[0;32mI (88788) lightbulb: Received event: 1[0m
+[0;32mI (88788) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (88798) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (88798) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (91818) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (91818) lightbulb: ON ON ON  : false[0m
+[0;32mI (91818) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (91828) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (91828) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (91838) lightbulb: Received event: 0[0m
+[0;32mI (93368) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (93368) lightbulb: ON ON ON  : false[0m
+[0;32mI (93368) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (93368) HAP lightbulb: CREATED timer handle: 0x3fcafa30[0m
+[0;32mI (93368) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[0;32mI (93378) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (93388) lightbulb: ON ON ON  : false[0m
+[0;32mI (93388) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (93398) HAP lightbulb: Characteristic 25 updated successfully[0m
+[1;37mValue Changed[0m
+[0;32mI (93398) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (93408) HAP lightbulb: hc is : [0m
+[0;32mI (93428) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (93428) lightbulb: ON ON ON  : false[0m
+[0;32mI (93428) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (93438) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (93768) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (93768) lightbulb: ON ON ON  : false[0m
+[0;32mI (93768) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (93778) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (93878) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (93878) lightbulb: ON ON ON  : true[0m
+[0;32mI (93878) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (93878) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (93878) HAP lightbulb: CREATED timer handle: 0x3fcac8c8[0m
+[0;32mI (93888) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (93898) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (93898) HAP lightbulb: hc is : [0m
+[0;32mI (93908) lightbulb: Received event: 1[0m
+[0;32mI (93908) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (93908) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (93918) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (95098) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (95098) lightbulb: ON ON ON  : false[0m
+[0;32mI (95098) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (95108) HAP lightbulb: CREATED timer handle: 0x3fcac8c8[0m
+[0;32mI (95108) HAP lightbulb: CREATED timer handle: 0x3fcac8ec[0m
+[0;32mI (95118) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (95118) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (95128) HAP lightbulb: hc is : [0m
+[0;32mI (95138) lightbulb: Received event: 0[0m
+[0;32mI (96998) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (96998) lightbulb: ON ON ON  : true[0m
+[0;32mI (96998) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (96998) HAP lightbulb: CREATED timer handle: 0x3fcac8ec[0m
+[0;32mI (97008) HAP lightbulb: CREATED timer handle: 0x3fcb15b4[0m
+[0;32mI (97008) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (97018) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (97018) HAP lightbulb: hc is : [0m
+[0;32mI (97028) lightbulb: Received event: 1[0m
+[0;32mI (97028) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (97038) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (97038) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (97898) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (97898) lightbulb: ON ON ON  : false[0m
+[0;32mI (97898) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (97908) HAP lightbulb: CREATED timer handle: 0x3fcb15b4[0m
+[0;32mI (97908) HAP lightbulb: CREATED timer handle: 0x3fcb15d8[0m
+[0;32mI (97918) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (97928) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (97928) HAP lightbulb: hc is : [0m
+[0;32mI (97938) lightbulb: Received event: 0[0m
+[0;32mI (98368) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (98378) lightbulb: ON ON ON  : false[0m
+[0;32mI (98378) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (98378) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (98888) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (98888) lightbulb: ON ON ON  : false[0m
+[0;32mI (98888) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (98888) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (98998) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (98998) lightbulb: ON ON ON  : true[0m
+[0;32mI (98998) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (98998) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (99008) HAP lightbulb: CREATED timer handle: 0x3fcbe79c[0m
+[0;32mI (99008) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (99018) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (99028) HAP lightbulb: hc is : [0m
+[0;32mI (99028) lightbulb: Received event: 1[0m
+[0;32mI (99028) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (99038) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (99038) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (99508) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (99508) lightbulb: ON ON ON  : false[0m
+[0;32mI (99508) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (99518) HAP lightbulb: CREATED timer handle: 0x3fcbe79c[0m
+[0;32mI (99518) HAP lightbulb: CREATED timer handle: 0x3fcbe7c0[0m
+[0;32mI (99528) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (99528) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (99538) HAP lightbulb: hc is : [0m
+[0;32mI (99548) lightbulb: Received event: 0[0m
+[0;32mI (100118) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (100118) lightbulb: ON ON ON  : false[0m
+[0;32mI (100118) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (100118) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (100328) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (100328) lightbulb: ON ON ON  : true[0m
+[0;32mI (100328) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (100328) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (100338) HAP lightbulb: CREATED timer handle: 0x3fcb8994[0m
+[0;32mI (100338) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (100348) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (100358) HAP lightbulb: hc is : [0m
+[0;32mI (100358) lightbulb: Received event: 1[0m
+[0;32mI (100358) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (100368) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (100368) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (101968) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (101968) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (101968) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (101978) HAP lightbulb: Received Write for Light Hue 255.000000[0m
+[0;32mI (101978) lightbulb: lightbulb_set_hue : 255.000000[0m
+[1;37mValue Changed[0m
+[0;32mI (101988) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (101998) HAP lightbulb: hc is : [0m
+[0;32mI (101998) lightbulb: Received event: 2[0m
+[0;32mI (102008) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (102008) lightbulb: ON ON ON  : false[0m
+[0;32mI (102008) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (102018) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (102018) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (102028) lightbulb: Received event: 0[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[0;32mI (102558) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (102558) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (102558) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (102918) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (102918) lightbulb: ON ON ON  : false[0m
+[0;32mI (102918) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (102918) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (103498) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (103498) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (103498) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (103508) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (103518) lightbulb: lightbulb_set_hue : 30.000000[0m
+[1;37mValue Changed[0m
+[0;32mI (103518) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (103528) HAP lightbulb: hc is : [0m
+[1;37mNotification Sent[0m
+[0;32mI (103618) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (103618) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (103618) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (104008) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (104008) lightbulb: ON ON ON  : false[0m
+[0;32mI (104008) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (104018) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (104528) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (104528) lightbulb: ON ON ON  : false[0m
+[0;32mI (104528) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (104528) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (104538) HAP lightbulb: Received Write for Light Saturation 48.000000[0m
+[0;32mI (104538) lightbulb: lightbulb_set_saturation : 48.000000[0m
+[1;31mE (104548) lightbulb: Invalid saturation value: 48.000000, must be between 0.0 and 1.0[0m
+[0;32mI (104558) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (104558) lightbulb: lightbulb_set_hue : 30.000000[0m
+[0;32mI (104568) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (104568) HAP lightbulb: hc is : [0m
+[0;32mI (104638) HAP lightbulb: Received Write for Light Saturation 48.000000[0m
+[0;32mI (104638) lightbulb: lightbulb_set_saturation : 48.000000[0m
+[1;31mE (104638) lightbulb: Invalid saturation value: 48.000000, must be between 0.0 and 1.0[0m
+[0;32mI (105338) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (105338) lightbulb: ON ON ON  : false[0m
+[0;32mI (105348) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (105348) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (105358) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (105358) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (105368) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (105368) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (105378) lightbulb: lightbulb_set_hue : 30.000000[0m
+[0;32mI (105378) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (105388) HAP lightbulb: hc is : [0m
+[0;32mI (105458) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (105458) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (105468) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (105858) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (105858) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (105858) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (105868) HAP lightbulb: Received Write for Light Hue 255.000000[0m
+[0;32mI (105878) lightbulb: lightbulb_set_hue : 255.000000[0m
+[1;37mValue Changed[0m
+[0;32mI (105878) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (105888) HAP lightbulb: hc is : [0m
+[1;37mNotification Sent[0m
+[0;32mI (105968) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (105968) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (105968) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (107798) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (107798) lightbulb: ON ON ON  : false[0m
+[0;32mI (107798) HAP lightbulb: CREATED timer handle: 0x0[0m
+[0;32mI (107808) HAP lightbulb: CREATED timer handle: 0x3fcbbe68[0m
+[0;32mI (107808) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (107818) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (107828) HAP lightbulb: hc is : [0m
+[1;37mNotification Sent[0m
+[0;32mI (108528) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (108528) lightbulb: ON ON ON  : true[0m
+[0;32mI (108528) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (108528) HAP lightbulb: CREATED timer handle: 0x3fcbbe68[0m
+[0;32mI (108528) HAP lightbulb: CREATED timer handle: 0x3fcb89b8[0m
+[0;32mI (108538) HAP lightbulb: Turn off timer started for 5000 ms.[0m
+[1;37mValue Changed[0m
+[0;32mI (108548) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (108548) HAP lightbulb: hc is : [0m
+[1;37mNotification Sent[0m
+[0;32mI (108558) lightbulb: Received event: 1[0m
+[0;32mI (108558) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (108568) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (108568) lightbulb: Rainbow mode, step 0[0m
+[0;32mI (110358) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (110358) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (110358) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (110368) HAP lightbulb: Received Write for Light Hue 30.000000[0m
+[0;32mI (110368) lightbulb: lightbulb_set_hue : 30.000000[0m
+[1;37mValue Changed[0m
+[0;32mI (110378) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (110388) HAP lightbulb: hc is : [0m
+[1;37mNotification Sent[0m
+[0;32mI (110398) lightbulb: Received event: 2[0m
+[0;32mI (110468) HAP lightbulb: Received Write for Light Saturation 67.000000[0m
+[0;32mI (110478) lightbulb: lightbulb_set_saturation : 67.000000[0m
+[1;31mE (110478) lightbulb: Invalid saturation value: 67.000000, must be between 0.0 and 1.0[0m
+[0;32mI (111998) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (111998) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (111998) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (112008) HAP lightbulb: Received Write for Light Hue 255.000000[0m
+[0;32mI (112018) lightbulb: lightbulb_set_hue : 255.000000[0m
+[1;37mValue Changed[0m
+[0;32mI (112028) HAP lightbulb: Characteristic 13 updated successfully[0m
+[0;32mI (112028) HAP lightbulb: hc is : [0m
+[1;37mNotification Sent[0m
+[0;32mI (112038) lightbulb: Received event: 2[0m
+[0;32mI (112128) HAP lightbulb: Received Write for Light Saturation 68.000000[0m
+[0;32mI (112128) lightbulb: lightbulb_set_saturation : 68.000000[0m
+[1;31mE (112128) lightbulb: Invalid saturation value: 68.000000, must be between 0.0 and 1.0[0m
+[0;32mI (112808) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (112808) lightbulb: ON ON ON  : false[0m
+[0;32mI (112808) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (112818) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (112818) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (112828) lightbulb: Received event: 0[0m
+[0;32mI (113538) HAP lightbulb: Timer expired, turning off LED strip.[0m
+[0;32mI (113538) lightbulb: ON ON ON  : false[0m
+[0;32mI (113538) HAP lightbulb: LED strip turned off after timer expiration.[0m
+[0;32mI (113538) HAP lightbulb: Characteristic 25 updated successfully[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mEvents Disabled for aid=1 iid=17[0m
+[1;37mEvents Disabled for aid=1 iid=16[0m
+[1;37mEvents Disabled for aid=1 iid=13[0m
+[1;37mEvents Disabled for aid=1 iid=15[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m

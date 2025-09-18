@@ -1,0 +1,284 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40389c44
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 27 2025 09:47:03[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3c70ch (247564) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0005c734 vaddr=3fc9ae00 size=038e4h ( 14564) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=126f20h (1208096) map[0m
+[0;32mI (344) esp_image: segment 3: paddr=00186f48 vaddr=3fc9e6e4 size=006a8h (  1704) load[0m
+[0;32mI (345) esp_image: segment 4: paddr=001875f8 vaddr=40380000 size=1ac70h (109680) load[0m
+[0;32mI (368) esp_image: segment 5: paddr=001a2270 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (377) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (387) cpu_start: Unicore app[0m
+[0;32mI (396) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (396) app_init: Application information:[0m
+[0;32mI (396) app_init: Project name:     lightbulb[0m
+[0;32mI (400) app_init: App version:      bfbcd6e-dirty[0m
+[0;32mI (404) app_init: Compile time:     Jun 27 2025 21:55:03[0m
+[0;32mI (409) app_init: ELF file SHA256:  bff722277...[0m
+[0;32mI (414) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c-dirty[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FCA62D0 len 00019D30 (103 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 9[0m
+[1;37mDatabase initialised. Accessory Device ID: 44:16:EE:63:F2:B7[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[0;32mI (528) lightbulb: brightness level gen: 0[0m
+[0;32mI (528) lightbulb: brightness level gen: 0[0m
+[0;32mI (538) lightbulb: brightness level gen: 0[0m
+[0;32mI (538) lightbulb: brightness level gen: 0[0m
+[0;32mI (548) lightbulb: brightness level gen: 0[0m
+[0;32mI (548) lightbulb: brightness level gen: 0[0m
+[0;32mI (548) lightbulb: brightness level gen: 0[0m
+[0;32mI (558) lightbulb: brightness level gen: 0[0m
+[0;32mI (558) lightbulb: brightness level gen: 0[0m
+[0;32mI (558) lightbulb: brightness level gen: 0[0m
+[0;32mI (568) lightbulb: brightness level gen: 0[0m
+[0;32mI (568) lightbulb: brightness level gen: 0[0m
+[0;32mI (578) lightbulb: brightness level gen: 0[0m
+[0;32mI (578) lightbulb: brightness level gen: 0[0m
+[0;32mI (578) lightbulb: brightness level gen: 0[0m
+[0;32mI (588) lightbulb: brightness level gen: 0[0m
+[0;32mI (588) lightbulb: brightness level gen: 0[0m
+[0;32mI (598) lightbulb: brightness level gen: 0[0m
+[0;32mI (598) lightbulb: brightness level gen: 0[0m
+[0;32mI (598) lightbulb: brightness level gen: 0[0m
+[0;32mI (608) lightbulb: Default color set: R=255, G=144, B=58[0m
+[0;32mI (608) app_hap_setup_payload: -----QR Code for HomeKit-----[0m
+[0;32mI (618) app_hap_setup_payload: Scan this QR code from the Home app on iOS[0m
+                              
+  █▀▀▀▀▀█ ▀▀▄███▄▄▀ █▀▀▀▀▀█   
+  █ ███ █  ▀  █▄█▀  █ ███ █   
+  █ ▀▀▀ █ ██ ▄▀  █▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀▄█▄▀ █▄█ ▀▀▀▀▀▀▀   
+   ▀▀▀▀█▀▀ █▄▄▀▀▄▀▀▄ ▀▀▄▄ █   
+  █ ██ █▀▀▄ ██ ▀▀█▀██  ▀ ██   
+  ▄█▀▀ ▀▀█▀██ ▀  ██▄▀▀▀▀▄▀    
+  █ ▄  ▄▀▄ ▀  ▄█▄▀▀ ▀  ▄  █   
+  ▀  ▀▀▀▀▀█▄▄▀▀ ▄██▀▀▀█▄█▄▄   
+  █▀▀▀▀▀█ █▄███▄▀▀█ ▀ ██▀▀█   
+  █ ███ █ █▄█▄▀ █▀█▀███▀███   
+  █ ▀▀▀ █ █  █▀▀ ▀▄▀▄▄▄▄▀ █   
+  ▀▀▀▀▀▀▀   ▀ ▀ ▀▀   ▀▀▀▀▀▀   
+                              
+
+[0;32mI (728) app_hap_setup_payload: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-homekit-sdk/qrcode.html?data=X-HM://005223CQ4Hoa6
+[1;32mMFi auth not supported. Falling back to HAP_MFI_AUTH_NONE[0m
+[0;32mI (748) pp: pp rom version: 9387209[0m
+[0;32mI (748) net80211: net80211 rom version: 9387209[0m
+[0;32mI (768) wifi:wifi driver task: 3fcb141c, prio:23, stack:6656, core=0[0m
+[0;32mI (768) wifi:wifi firmware version: 2dcd4f5[0m
+[0;32mI (768) wifi:wifi certification version: v7.0[0m
+[0;32mI (768) wifi:config NVS flash: enabled[0m
+[0;32mI (768) wifi:config nano formatting: disabled[0m
+[0;32mI (778) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (778) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (788) wifi:Init management short buffer num: 32[0m
+[0;32mI (788) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (788) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (798) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (798) wifi:Init static rx buffer num: 10[0m
+[0;32mI (808) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (808) wifi_init: rx ba win: 6[0m
+[0;32mI (808) wifi_init: accept mbox: 6[0m
+[0;32mI (818) wifi_init: tcpip mbox: 32[0m
+[0;32mI (818) wifi_init: udp mbox: 10[0m
+[0;32mI (818) wifi_init: tcp mbox: 6[0m
+[0;32mI (818) wifi_init: tcp tx win: 5760[0m
+[0;32mI (828) wifi_init: tcp rx win: 5760[0m
+[0;32mI (828) wifi_init: tcp mss: 1440[0m
+[0;32mI (828) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (838) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;37mSetup ID: Hoa6[0m
+[1;37mHAP Main Loop Started[0m
+[0;32mI (848) mdns_mem: mDNS task will be created from internal RAM[0m
+[1;37mmDNS initialised[0m
+[1;37mRegistering HomeKit web handlers[0m
+[1;37mAnnouncing _hap._tcp mDNS service[0m
+[1;37mHAP Started[0m
+[0;32mI (858) wifi_prov_scheme_ble: BT memory released[0m
+[0;32mI (868) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (868) wifi_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (878) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (918) wifi:mode : sta (34:cd:b0:51:43:18)[0m
+[0;32mI (918) wifi:enable tsf[0m
+[0;32mI (3328) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3328) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3338) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3348) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3528) wifi:connected with #Telia-3134A8, aid = 5, channel 1, BW20, bssid = e4:c0:e2:31:34:ae[0m
+[0;32mI (3528) wifi:security: WPA2-PSK, phy: bgn, rssi: -73[0m
+[0;32mI (3528) wifi:pm start, type: 1[0m
+
+[0;32mI (3528) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3538) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (3558) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3618) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4748) app_wifi: Connected with IPv6 Address:fe80:0000:0000:0000:36cd:b0ff:fe51:4318[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[0;32mI (7748) app_wifi: Connected with IPv6 Address:2001:2043:5d09:dd00:36cd:b0ff:fe51:4318[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (13148) esp_netif_handlers: sta ip: 169.254.25.67, mask: 255.255.0.0, gw: 0.0.0.0[0m
+[0;32mI (13148) app_wifi: Connected with IP Address:169.254.25.67[0m
+[0;32mI (13448) esp_netif_handlers: sta ip: 192.168.1.128, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (13448) app_wifi: Connected with IP Address:192.168.1.128[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mEvents Disabled for aid=1 iid=17[0m
+[1;37mEvents Disabled for aid=1 iid=16[0m
+[1;37mEvents Disabled for aid=1 iid=13[0m
+[1;37mEvents Disabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (58928) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (58928) lightbulb: lightbulb_set_on : false[0m
+[0;32mI (58928) SPECIAL_DAY: Initializing SNTP[0m
+[0;32mI (58928) SPECIAL_DAY: Waiting for system time to be set... (1/10)[0m
+[0;32mI (59938) SPECIAL_DAY: System time is now synced.[0m
+[0;32mI (59938) SPECIAL_DAY: Current time: 2025-06-28 13:00:44[0m
+[1;37mValue Changed[0m
+[0;32mI (59938) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (59938) HAP lightbulb: hc is : [0m
+[0;32mI (59958) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (59958) lightbulb: lightbulb_set_on : true[0m
+[0;32mI (59958) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[0;32mI (59958) lightbulb: brightness level gen: 0[0m
+[0;32mI (59968) lightbulb: brightness level gen: 0[0m
+[0;32mI (59968) lightbulb: brightness level gen: 0[0m
+[0;32mI (59978) lightbulb: brightness level gen: 0[0m
+[0;32mI (59978) lightbulb: brightness level gen: 0[0m
+[0;32mI (59978) lightbulb: brightness level gen: 0[0m
+[0;32mI (59988) lightbulb: brightness level gen: 0[0m
+[0;32mI (59988) lightbulb: brightness level gen: 0[0m
+[0;32mI (59998) lightbulb: brightness level gen: 0[0m
+[0;32mI (59998) lightbulb: brightness level gen: 0[0m
+[0;32mI (59998) lightbulb: brightness level gen: 0[0m
+[0;32mI (60008) lightbulb: brightness level gen: 0[0m
+[0;32mI (60008) lightbulb: brightness level gen: 0[0m
+[0;32mI (60018) lightbulb: brightness level gen: 0[0m
+[0;32mI (60018) lightbulb: brightness level gen: 0[0m
+[0;32mI (60018) lightbulb: brightness level gen: 0[0m
+[0;32mI (60028) lightbulb: brightness level gen: 0[0m
+[0;32mI (60028) lightbulb: brightness level gen: 0[0m
+[0;32mI (60038) lightbulb: brightness level gen: 0[0m
+[0;32mI (60038) lightbulb: brightness level gen: 0[0m
+[1;37mValue Changed[0m
+[0;32mI (60048) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (60048) HAP lightbulb: hc is : [0m
+[0;32mI (60058) lightbulb: Received event: 2[0m
+[0;32mI (60058) lightbulb: Brightness changed to: 0[0m
+[0;32mI (60058) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60068) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60178) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60178) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60278) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60278) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60378) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60378) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60478) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60478) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60578) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60578) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60678) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60678) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60778) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60778) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60878) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60878) lightbulb: Setting brightness level: 0[0m
+[0;32mI (60978) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (60978) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61078) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61078) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61178) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61178) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61278) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61278) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61378) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61378) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61478) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61478) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61578) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61578) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61678) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61678) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61778) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61778) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61878) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61878) lightbulb: Setting brightness level: 0[0m
+[0;32mI (61978) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (61978) lightbulb: Setting brightness level: 0[0m
+[0;32mI (62078) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (62078) lightbulb: Setting brightness level: 0[0m
+[0;32mI (62178) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (62178) lightbulb: Setting brightness level: 0[0m
+[0;32mI (62278) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (62278) lightbulb: Setting brightness level: 0[0m
+[0;32mI (62298) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (62298) lightbulb: lightbulb_set_on : false[0m
+[0;32mI (62298) SPECIAL_DAY: SNTP already initialized. Skipping.[0m
+[1;37mValue Changed[0m
+[0;32mI (62298) HAP lightbulb: Characteristic 25 updated successfully[0m
+[0;32mI (62308) HAP lightbulb: hc is : [0m
+[0;32mI (62308) lightbulb: Received event: 2[0m
+[0;32mI (62308) lightbulb: Brightness changed to: 0[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m

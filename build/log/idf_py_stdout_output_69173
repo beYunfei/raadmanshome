@@ -1,0 +1,841 @@
+Command: /home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python /mnt/c/work/esp32/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/lightbulb.elf /mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf -m '/home/yunfei/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/mnt/c/work/esp32/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (152) esp_image: segment 1: paddr=0005c704 vaddr=3fc9ae00 sizeESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40389c44
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 27 2025 09:47:03[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (25) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (37) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (98) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3c6dch (247516) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0005c704 vaddr=3fc9ae00 size=03914h ( 14612) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=126each (1207980) map[0m
+[0;32mI (344) esp_image: segment 3: paddr=00186ed4 vaddr=3fc9e714 size=00658h (  1624) load[0m
+[0;32mI (345) esp_image: segment 4: paddr=00187534 vaddr=40380000 size=1ac70h (109680) load[0m
+[0;32mI (368) esp_image: segment 5: paddr=001a21ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (377) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (387) cpu_start: Unicore app[0m
+[0;32mI (395) cpu_start: Pro cpu start user code[0m
+[0;32mI (396) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (396) app_init: Application information:[0m
+[0;32mI (396) app_init: Project name:     lightbulb[0m
+[0;32mI (400) app_init: App version:      bfbcd6e-dirty[0m
+[0;32mI (404) app_init: Compile time:     Jun 27 2025 21:55:03[0m
+[0;32mI (409) app_init: ELF file SHA256:  012329301...[0m
+[0;32mI (413) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c-dirty[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FCA62B0 len 00019D50 (103 KiB): RAM[0m
+[0;32mI (443) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (449) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (455) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (473) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (484) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is not Paired with any controller[0m
+[1;37mDatabase initialised. Accessory Device ID: 44:16:EE:63:F2:B7[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (518) lightbulb: Dummy Light Driver Init.[0m
+[0;32mI (528) lightbulb: Default color set: R=255, G=144, B=58[0m
+[0;32mI (528) app_hap_setup_payload: -----QR Code for HomeKit-----[0m
+[0;32mI (538) app_hap_setup_payload: Scan this QR code from the Home app on iOS[0m
+                              
+  █▀▀▀▀▀█ ▀▀▄███▄▄▀ █▀▀▀▀▀█   
+  █ ███ █  ▀  █▄█▀  █ ███ █   
+  █ ▀▀▀ █ ██ ▄▀  █▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀▄█▄▀ █▄█ ▀▀▀▀▀▀▀   
+   ▀▀▀▀█▀▀ █▄▄▀▀▄▀▀▄ ▀▀▄▄ █   
+  █ ██ █▀▀▄ ██ ▀▀█▀██  ▀ ██   
+  ▄█▀▀ ▀▀█▀██ ▀  ██▄▀▀▀▀▄▀    
+  █ ▄  ▄▀▄ ▀  ▄█▄▀▀ ▀  ▄  █   
+  ▀  ▀▀▀▀▀█▄▄▀▀ ▄██▀▀▀█▄█▄▄   
+  █▀▀▀▀▀█ █▄███▄▀▀█ ▀ ██▀▀█   
+  █ ███ █ █▄█▄▀ █▀█▀███▀███   
+  █ ▀▀▀ █ █  █▀▀ ▀▄▀▄▄▄▄▀ █   
+  ▀▀▀▀▀▀▀   ▀ ▀ ▀▀   ▀▀▀▀▀▀   
+                              
+
+[0;32mI (648) app_hap_setup_payload: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-homekit-sdk/qrcode.html?data=X-HM://005223CQ4Hoa6
+[1;32mMFi auth not supported. Falling back to HAP_MFI_AUTH_NONE[0m
+[0;32mI (668) pp: pp rom version: 9387209[0m
+[0;32mI (668) net80211: net80211 rom version: 9387209[0m
+[0;32mI (688) wifi:wifi driver task: 3fcb1a84, prio:23, stack:6656, core=0[0m
+[0;32mI (688) wifi:wifi firmware version: 2dcd4f5[0m
+[0;32mI (688) wifi:wifi certification version: v7.0[0m
+[0;32mI (688) wifi:config NVS flash: enabled[0m
+[0;32mI (688) wifi:config nano formatting: disabled[0m
+[0;32mI (698) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (698) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (708) wifi:Init management short buffer num: 32[0m
+[0;32mI (708) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (708) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (718) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (718) wifi:Init static rx buffer num: 10[0m
+[0;32mI (728) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (728) wifi_init: rx ba win: 6[0m
+[0;32mI (728) wifi_init: accept mbox: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (738) wifi_init: udp mbox: 10[0m
+[0;32mI (738) wifi_init: tcp mbox: 6[0m
+[0;32mI (738) wifi_init: tcp tx win: 5760[0m
+[0;32mI (748) wifi_init: tcp rx win: 5760[0m
+[0;32mI (748) wifi_init: tcp mss: 1440[0m
+[0;32mI (748) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (758) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;37mSetup ID: Hoa6[0m
+[1;37mHAP Main Loop Started[0m
+[0;32mI (768) mdns_mem: mDNS task will be created from internal RAM[0m
+[1;37mmDNS initialised[0m
+[1;37mRegistering HomeKit web handlers[0m
+[1;37mAnnouncing _hap._tcp mDNS service[0m
+[1;37mHAP Started[0m
+[0;32mI (778) wifi_prov_scheme_ble: BT memory released[0m
+[0;32mI (788) app_wifi: Starting provisioning[0m
+[0;32mI (788) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (828) wifi:mode : sta (34:cd:b0:51:43:18)[0m
+[0;32mI (828) wifi:enable tsf[0m
+[0;32mI (838) BLE_INIT: BT controller compile version [4713a69][0m
+[0;32mI (838) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (838) BLE_INIT: Bluetooth MAC: 34:cd:b0:51:43:1a[0m
+[0;32mI (848) protocomm_nimble: BLE Host Task Started[0m
+[0;32mI (848) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (858) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (858) NimBLE: disc_mode=2[0m
+[0;32mI (858) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=256 adv_itvl_max=256[0m
+[0;32mI (868) NimBLE: [0m
+
+[0;32mI (878) wifi_prov_mgr: Provisioning started with service name : PROV_514318 [0m
+[0;32mI (878) app_wifi: Provisioning started[0m
+[0;32mI (878) app_wifi: -----QR Code for ESP Provisioning-----[0m
+[0;32mI (888) app_wifi: Scan this QR code from the phone app for Provisioning.[0m
+                                      
+  █▀▀▀▀▀█ ▀▀▀█▄█   ▀▄▄▀▀▄ ▀ █▀▀▀▀▀█   
+  █ ███ █  ▀▄█ █▄ ▀▄▄▀▀██ ▀ █ ███ █   
+  █ ▀▀▀ █  ▄▀█▀▄▀ ▀█ ▀▀██▄▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ █▄▀ █▄█▄█ █▄█ █ ▀ ▀▀▀▀▀▀▀   
+  ██ ▀█ ▀  ▀▄ ▀▄ ▄▀▀▀██ ▀▄▄ ▀▄▄ ▄▄▀   
+    ▀ ▄ ▀ ▄▀  ▀▀▀▀▄▄▀▄▀▀ ▀ █  ▄█▄█▀   
+   █ ▀▀▄▀█ ██ ▄▄██▄ ▀▀▀▄█  ▄▀█ ▀▄▄▀   
+  ▄█▀█▀ ▀▀█ ▀ ▄ ▄█▄ ▀█▄▀█▄▀▄▄█  ▄     
+   ▀▄█ ▄▀█▀ ██▀▀ █▀ ▀▄▀ ▄█  ███▄ ██   
+  █▄▀  ▄▀▀▀▄█▄▀▄███▀█▀█ ▀█ █▀▀ ▀▄▄▀   
+  ▄▀▀▀▄▄▀██  ▀▄▄█▄▀▀█▄█▄█▀▀█ ▀▄ ▄▀    
+  █  ▄ █▀▄▄  █▄  ▀█▄█▄▀▀█▀█ ▄█ ▀▄▄█   
+  ▀▀▀ ▀▀▀▀▄ █▀▀▄▄██▄█▀█ ▀██▀▀▀█▄▄▀    
+  █▀▀▀▀▀█  █ █▀▀▀██ ▄▀▄ █▄█ ▀ █ ▄ ▄   
+  █ ███ █ █▀ ▄█▀▀█▀▄█▄▄ ▀██▀▀▀▀▄▄▀▀   
+  █ ▀▀▀ █ ▄▀▀▀ ▄█▀█ █▀ ▀▀███▄▀█ █▄█   
+  ▀▀▀▀▀▀▀ ▀▀ ▀  ▀▀ ▀     ▀▀▀▀▀▀       
+                                      
+
+[0;32mI (1068) app_wifi: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-jumpstart/qrcode.html?data={"ver":"v1","name":"PROV_514318","pop":"b0514318","transport":"ble"}
+[0;32mI (1088) app_wifi: Provisioning Started. Name : PROV_514318, POP : b0514318[0m
+[0;32mI (32158) protocomm_nimble: mtu update event; conn_handle=1 cid=4 mtu=256[0m
+[0;33mW (63508) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (63568) app_wifi: Received Wi-Fi credentials[0m
+	SSID     : #Telia-3134A8
+	Password : @C16F(9x#wW=tcC9
+[0;32mI (69498) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (69498) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (69498) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (69508) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (69808) wifi:state: assoc -> assoc (0x0)[0m
+[1;31mE (69818) wifi:Association refused too many times, max allowed 1[0m
+[0;32mI (69818) wifi:state: assoc -> init (0xd010)[0m
+[0;32mI (69828) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy[0m
+
+[0;32mI (69828) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (69838) app_wifi: Disconnected. Connecting to the AP again...[0m
+[1;31mE (69838) wifi_prov_mgr: STA Disconnected[0m
+[1;31mE (69838) wifi_prov_mgr: Disconnect reason : 208[0m
+[1;31mE (69848) wifi:sta is connecting, return error[0m
+[0;32mI (74648) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy[0m
+
+[0;32mI (74658) app_wifi: Disconnected. Connecting to the AP again...[0m
+[1;31mE (74658) wifi_prov_mgr: STA Disconnected[0m
+[1;31mE (74658) wifi_prov_mgr: Disconnect reason : 205[0m
+[1;31mE (74658) wifi:sta is connecting, return error[0m
+[0;32mI (79468) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (79468) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (79478) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (79478) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (79568) wifi:connected with #Telia-3134A8, aid = 5, channel 1, BW20, bssid = e4:c0:e2:31:34:ae[0m
+[0;32mI (79568) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (79578) wifi:pm start, type: 1[0m
+
+[0;32mI (79578) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (79578) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (79588) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (79978) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:2, winSize:64[0m
+[0;32mI (80668) app_wifi: Connected with IPv6 Address:fe80:0000:0000:0000:36cd:b0ff:fe51:4318[0m
+[0;32mI (83668) app_wifi: Connected with IPv6 Address:2001:2043:5d09:dd00:36cd:b0ff:fe51:4318[0m
+[0;32mI (87068) esp_netif_handlers: sta ip: 192.168.1.128, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (87068) app_wifi: Connected with IP Address:192.168.1.128[0m
+[0;32mI (87068) wifi_prov_mgr: STA Got IP[0m
+[0;32mI (87068) app_wifi: Provisioning successful[0m
+[0;32mI (89638) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (89638) NimBLE: disc_mode=2[0m
+[0;32mI (89638) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=256 adv_itvl_max=256[0m
+[0;32mI (89648) NimBLE: [0m
+
+[0;32mI (90458) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (90458) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (90458) wifi_prov_mgr: Provisioning stopped[0m
+[0;32mI (90468) wifi_prov_scheme_ble: BTDM memory released[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37m######## Starting Pair Setup ########[0m
+[1;37mPair Setup M1 Received[0m
+[1;37mPair Setup M2 Successful[0m
+[1;37mPair Setup M3 Received[0m
+[1;32mUsing pair-setup without MFi.[0m
+[1;37mPair Setup M4 Successful[0m
+[1;37mPair Setup M5 Received[0m
+[1;37mPair Setup Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;32mSkipping s# update for Certification requirements.[0m
+[1;37mRe-announcing _hap._tcp mDNS service[0m
+[1;37mClearing Pair Setup Context[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mPair Verify M3 Received[0m
+[1;31mNo ctrl details found[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mAdd Pairing received[0m
+[1;37mModifying Existing Controller B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mList Pairings received[0m
+[1;37mRemove Pairing received[0m
+[1;37mRemoving Controller AFDE1F5A-0E48-4956-90AB-3ECA521F4425[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mDecryption error/Connection lost. Marking session as invalid[0m
+[1;37mHomeKit Session terminated[0m
+[0;32mI (134778) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (134778) lightbulb: lightbulb_set_on : false[0m
+[1;37mValue Changed[0m
+[0;32mI (136098) HAP lightbulb: Received Write for Light On[0m
+[0;32mI (136098) lightbulb: lightbulb_set_on : true[0m
+[1;37mValue Changed[0m
+[0;32mI (136108) SPECIAL_DAY: Initializing SNTP[0m
+[0;32mI (136108) SPECIAL_DAY: Waiting for system time to be set... (1/10)[0m
+[0;32mI (137108) SPECIAL_DAY: Waiting for system time to be set... (2/10)[0m
+[0;32mI (138108) SPECIAL_DAY: Waiting for system time to be set... (3/10)[0m
+[0;32mI (139108) SPECIAL_DAY: Waiting for system time to be set... (4/10)[0m
+[0;32mI (140108) SPECIAL_DAY: Waiting for system time to be set... (5/10)[0m
+[0;32mI (141108) SPECIAL_DAY: System time is now synced.[0m
+[0;32mI (141108) SPECIAL_DAY: Current time: 2025-06-28 11:37:01[0m
+[0;32mI (141108) SPECIAL_DAY: the birthday day: 28[0m
+[0;32mI (141108) lightbulb: Special day detected, enabling rainbow mode[0m
+[0;32mI (141208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (141308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (141408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (141508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (141608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (141708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (141808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (141908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (142908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (143908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (144908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (145908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (146008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (146108) lightbulb: No new event and timeout, continuing brightness control[0m
+I (146208) lightbulb: No new event and timeout, continuing brightness control
+[0;32mI (146308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (146408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (146508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (146608) lightbulb: No new event and timeout, continuing brightness control[0m
+I (146708) lightbulb: No new event and timeout, continuing brightness control
+[0;32mI (146808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (146908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (147908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (148908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (149908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (150908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (151908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (152908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (153908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (154908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (155808) lightbulb: No new event and timeout, continuing brightness control[0m
+I (155908) lightbulb: No new event and timeout, continuing brightness control
+[0;32mI (156008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (156908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (157908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158108) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158208) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158308) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158408) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158508) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158808) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (158928) HAP lightbulb: Received Write for Light Brightness 53[0m
+[0;32mI (158928) lightbulb: lightbulb_set_brightness : 53[0m
+[1;37mValue Changed[0m
+[0;32mI (158938) lightbulb: Received event: 2[0m
+[0;32mI (158938) lightbulb: Brightness changed to: 0[0m
+[0;32mI (159038) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (159138) HAP lightbulb: Received Write for Light Brightness 85[0m
+[0;32mI (159138) lightbulb: lightbulb_set_brightness : 85[0m
+[1;37mValue Changed[0m
+[0;32mI (159138) lightbulb: Received event: 2[0m
+[0;32mI (159138) lightbulb: Brightness changed to: 0[0m
+[0;32mI (159248) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (159348) HAP lightbulb: Received Write for Light Brightness 91[0m
+[0;32mI (159348) lightbulb: lightbulb_set_brightness : 91[0m
+[1;37mValue Changed[0m
+[0;32mI (159348) lightbulb: Received event: 2[0m
+[0;32mI (159348) lightbulb: Brightness changed to: 0[0m
+[0;32mI (159458) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (159558) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (159658) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (159758) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (159768) HAP lightbulb: Received Write for Light Brightness 88[0m
+[0;32mI (159768) lightbulb: lightbulb_set_brightness : 88[0m
+[1;37mValue Changed[0m
+[0;32mI (159768) lightbulb: Received event: 2[0m
+[0;32mI (159768) lightbulb: Brightness changed to: 0[0m
+[0;32mI (159858) HAP lightbulb: Received Write for Light Brightness 59[0m
+[0;32mI (159858) lightbulb: lightbulb_set_brightness : 59[0m
+[1;37mValue Changed[0m
+[0;32mI (159858) lightbulb: Received event: 2[0m
+[0;32mI (159858) lightbulb: Brightness changed to: 0[0m
+[0;32mI (159968) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (160068) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (160158) HAP lightbulb: Received Write for Light Brightness 40[0m
+[0;32mI (160158) lightbulb: lightbulb_set_brightness : 40[0m
+[1;37mValue Changed[0m
+[0;32mI (160168) lightbulb: Received event: 2[0m
+[0;32mI (160168) lightbulb: Brightness changed to: 0[0m
+[0;32mI (160268) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (160368) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (160388) HAP lightbulb: Received Write for Light Brightness 40[0m
+[0;32mI (160388) lightbulb: lightbulb_set_brightness : 40[0m
+[0;32mI (160398) lightbulb: Received event: 2[0m
+[0;32mI (160398) lightbulb: Brightness changed to: 0[0m
+[0;32mI (160498) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (160598) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (160678) HAP lightbulb: Received Write for Light Brightness 60[0m
+[0;32mI (160678) lightbulb: lightbulb_set_brightness : 60[0m
+[1;37mValue Changed[0m
+[0;32mI (160678) lightbulb: Received event: 2[0m
+[0;32mI (160678) lightbulb: Brightness changed to: 0[0m
+[0;32mI (160788) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (160888) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (160968) HAP lightbulb: Received Write for Light Brightness 80[0m
+[0;32mI (160968) lightbulb: lightbulb_set_brightness : 80[0m
+[1;37mValue Changed[0m
+[0;32mI (160978) lightbulb: Received event: 2[0m
+[0;32mI (160978) lightbulb: Brightness changed to: 0[0m
+[0;32mI (161088) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (161188) HAP lightbulb: Received Write for Light Brightness 84[0m
+[0;32mI (161188) lightbulb: lightbulb_set_brightness : 84[0m
+[1;37mValue Changed[0m
+[0;32mI (161188) lightbulb: Received event: 2[0m
+[0;32mI (161188) lightbulb: Brightness changed to: 0[0m
+[0;32mI (161298) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (161398) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (161498) HAP lightbulb: Received Write for Light Brightness 84[0m
+[0;32mI (161498) lightbulb: lightbulb_set_brightness : 84[0m
+[0;32mI (161498) lightbulb: Received event: 2[0m
+[0;32mI (161498) lightbulb: Brightness changed to: 0[0m
+[0;32mI (161608) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (161708) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (161798) HAP lightbulb: Received Write for Light Brightness 83[0m
+[0;32mI (161798) lightbulb: lightbulb_set_brightness : 83[0m
+[1;37mValue Changed[0m
+[0;32mI (161808) lightbulb: Received event: 2[0m
+[0;32mI (161808) lightbulb: Brightness changed to: 0[0m
+[0;32mI (161908) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162008) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162008) HAP lightbulb: Received Write for Light Brightness 85[0m
+[0;32mI (162008) lightbulb: lightbulb_set_brightness : 85[0m
+[1;37mValue Changed[0m
+[0;32mI (162018) lightbulb: Received event: 2[0m
+[0;32mI (162018) lightbulb: Brightness changed to: 0[0m
+[0;32mI (162118) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162218) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162318) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162418) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162518) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162618) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162668) HAP lightbulb: Received Write for Light Brightness 84[0m
+[0;32mI (162668) lightbulb: lightbulb_set_brightness : 84[0m
+[1;37mValue Changed[0m
+[0;32mI (162678) lightbulb: Received event: 2[0m
+[0;32mI (162678) lightbulb: Brightness changed to: 0[0m
+[0;32mI (162788) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162888) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (162928) HAP lightbulb: Received Write for Light Brightness 75[0m
+[0;32mI (162928) lightbulb: lightbulb_set_brightness : 75[0m
+[1;37mValue Changed[0m
+[0;32mI (162928) lightbulb: Received event: 2[0m
+[0;32mI (162928) lightbulb: Brightness changed to: 0[0m
+[0;32mI (163038) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (163128) HAP lightbulb: Received Write for Light Brightness 49[0m
+[0;32mI (163128) lightbulb: lightbulb_set_brightness : 49[0m
+[1;37mValue Changed[0m
+[0;32mI (163138) lightbulb: Received event: 2[0m
+[0;32mI (163138) lightbulb: Brightness changed to: 0[0m
+[0;32mI (163248) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (163348) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (163448) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (163538) HAP lightbulb: Received Write for Light Brightness 37[0m
+[0;32mI (163538) lightbulb: lightbulb_set_brightness : 37[0m
+[1;37mValue Changed[0m
+[0;32mI (163548) lightbulb: Received event: 2[0m
+[0;32mI (163548) lightbulb: Brightness changed to: 0[0m
+[0;32mI (163648) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (163738) HAP lightbulb: Received Write for Light Brightness 34[0m
+[0;32mI (163738) lightbulb: lightbulb_set_brightness : 34[0m
+[1;37mValue Changed[0m
+[0;32mI (163748) lightbulb: Received event: 2[0m
+[0;32mI (163748) lightbulb: Brightness changed to: 0[0m
+[0;32mI (163858) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (163958) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164048) HAP lightbulb: Received Write for Light Brightness 34[0m
+[0;32mI (164048) lightbulb: lightbulb_set_brightness : 34[0m
+[0;32mI (164048) lightbulb: Received event: 2[0m
+[0;32mI (164048) lightbulb: Brightness changed to: 0[0m
+[0;32mI (164158) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164258) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164358) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164458) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164558) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164658) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164758) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164858) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (164958) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165058) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165158) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165258) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165358) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165458) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165558) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165658) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165758) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165858) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (165958) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (166058) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (166098) HAP lightbulb: Received Write for Light Off[0m
+[0;32mI (166098) lightbulb: lightbulb_set_on : false[0m
+[1;37mValue Changed[0m
+[0;32mI (166158) lightbulb: No new event and timeout, continuing brightness control[0m
+[0;32mI (166158) lightbulb: Turning off lightbulb[0m
+
+FreeRTOS: FreeRTOS Task "lightbulb_task" should not return, Aborting now!
+Core  0 register dump:
+MEPC    : 0x403805a2  RA      : 0x4038cc34  SP      : 0x3fca5400  GP      : 0x3fc9b600  
+TP      : 0x3fca5430  T0      : 0x00000060  T1      : 0x00000000  T2      : 0x00000000  
+S0/FP   : 0x3fc9d000  S1      : 0x00000000  A0      : 0x3fc9d048  A1      : 0x3c13466f  
+A2      : 0x00000023  A3      : 0x00000000  A4      : 0x00000001  A5      : 0x3fca4000  
+A6      : 0x00000001  A7      : 0x00000060  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x3fcaca08  T4      : 0x60016400  T5      : 0x0000000c  T6      : 0x000005a0  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/mnt/c/work/esp32/esp-homekit-sdk/examples/lightbulb/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc9d048 <msg> "") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+483	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc9d048 <msg> "") at /mnt/c/work/esp32/esp-idf/components/esp_system/panic.c:483
+#1  0x4038cc34 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /mnt/c/work/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:257
+
+
+
+ELF file SHA256: 012329301
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038055a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (15) boot: ESP-IDF v6.0-dev-774-g68b583f30c 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Jun 27 2025 09:47:03[0m
+[0;32mI (16) boot: chip revision: v0.4[0m
+[0;32mI (17) boot: efuse block revision: v1.3[0m
+[0;32mI (21) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (24) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (28) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (32) boot: Enabling RNG early entropy source...[0m
+[0;32mI (36) boot: Partition Table:[0m
+[0;32mI (39) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (45) boot:  0 sec_cert         unknown          3f 06 0000d000 00003000[0m
+[0;32mI (52) boot:  1 nvs              WiFi data        01 02 00010000 00006000[0m
+[0;32mI (58) boot:  2 otadata          OTA data         01 00 00016000 00002000[0m
+[0;32mI (65) boot:  3 phy_init         RF data          01 01 00018000 00001000[0m
+[0;32mI (71) boot:  4 ota_0            OTA app          00 10 00020000 00190000[0m
+[0;32mI (78) boot:  5 ota_1            OTA app          00 11 001b0000 00190000[0m
+[0;32mI (84) boot:  6 factory_nvs      WiFi data        01 02 00340000 00006000[0m
+[0;32mI (91) boot:  7 nvs_keys         NVS keys         01 04 00346000 00001000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00020020 vaddr=3c130020 size=3c6dch (247516) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0005c704 vaddr=3fc9ae00 size=03914h ( 14612) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=126each (1207980) map[0m
+[0;32mI (344) esp_image: segment 3: paddr=00186ed4 vaddr=3fc9e714 size=00658h (  1624) load[0m
+[0;32mI (345) esp_image: segment 4: paddr=00187534 vaddr=40380000 size=1ac70h (109680) load[0m
+[0;32mI (368) esp_image: segment 5: paddr=001a21ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (377) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (387) cpu_start: Unicore app[0m
+[0;32mI (395) cpu_start: Pro cpu start user code[0m
+[0;32mI (395) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (396) app_init: Application information:[0m
+[0;32mI (396) app_init: Project name:     lightbulb[0m
+[0;32mI (400) app_init: App version:      bfbcd6e-dirty[0m
+[0;32mI (404) app_init: Compile time:     Jun 27 2025 21:55:03[0m
+[0;32mI (409) app_init: ELF file SHA256:  012329301...[0m
+[0;32mI (413) app_init: ESP-IDF:          v6.0-dev-774-g68b583f30c-dirty[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (423) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (431) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (437) heap_init: At 3FCA62B0 len 00019D50 (103 KiB): RAM[0m
+[0;32mI (442) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (448) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (454) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (461) spi_flash: detected chip: boya[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;32mI (467) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (472) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (479) coexist: coex firmware version: 7b9a184[0m
+[0;32mI (483) coexist: coexist rom version 9387209[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[1;37mKeystore initialised[0m
+[1;37mAccessory is Paired with atleast one controller[0m
+[1;37mUpdated state number to 2[0m
+[1;37mDatabase initialised. Accessory Device ID: 44:16:EE:63:F2:B7[0m
+[1;37mHAP Initialization succeeded. Version : 4.0-bfbcd6e[0m
+[1;32mWi-Fi reconfiguration service not supported. Please use MFi variant of the SDK.[0m
+[0;32mI (528) lightbulb: Dummy Light Driver Init.[0m
+[0;32mI (528) lightbulb: Default color set: R=255, G=144, B=58[0m
+[0;32mI (538) app_hap_setup_payload: -----QR Code for HomeKit-----[0m
+[0;32mI (538) app_hap_setup_payload: Scan this QR code from the Home app on iOS[0m
+                              
+  █▀▀▀▀▀█ ▀▀▄███▄▄▀ █▀▀▀▀▀█   
+  █ ███ █  ▀  █▄█▀  █ ███ █   
+  █ ▀▀▀ █ ██ ▄▀  █▀ █ ▀▀▀ █   
+  ▀▀▀▀▀▀▀ ▀▄█▄▀ █▄█ ▀▀▀▀▀▀▀   
+   ▀▀▀▀█▀▀ █▄▄▀▀▄▀▀▄ ▀▀▄▄ █   
+  █ ██ █▀▀▄ ██ ▀▀█▀██  ▀ ██   
+  ▄█▀▀ ▀▀█▀██ ▀  ██▄▀▀▀▀▄▀    
+  █ ▄  ▄▀▄ ▀  ▄█▄▀▀ ▀  ▄  █   
+  ▀  ▀▀▀▀▀█▄▄▀▀ ▄██▀▀▀█▄█▄▄   
+  █▀▀▀▀▀█ █▄███▄▀▀█ ▀ ██▀▀█   
+  █ ███ █ █▄█▄▀ █▀█▀███▀███   
+  █ ▀▀▀ █ █  █▀▀ ▀▄▀▄▄▄▄▀ █   
+  ▀▀▀▀▀▀▀   ▀ ▀ ▀▀   ▀▀▀▀▀▀   
+                              
+
+[0;32mI (648) app_hap_setup_payload: If QR code is not visible, copy paste the below URL in a browser.[0m
+https://espressif.github.io/esp-homekit-sdk/qrcode.html?data=X-HM://005223CQ4Hoa6
+[1;32mMFi auth not supported. Falling back to HAP_MFI_AUTH_NONE[0m
+[0;32mI (668) pp: pp rom version: 9387209[0m
+[0;32mI (668) net80211: net80211 rom version: 9387209[0m
+[0;32mI (688) wifi:wifi driver task: 3fcb0a30, prio:23, stack:6656, core=0[0m
+[0;32mI (688) wifi:wifi firmware version: 2dcd4f5[0m
+[0;32mI (688) wifi:wifi certification version: v7.0[0m
+[0;32mI (688) wifi:config NVS flash: enabled[0m
+[0;32mI (698) wifi:config nano formatting: disabled[0m
+[0;32mI (698) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (708) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (708) wifi:Init management short buffer num: 32[0m
+[0;32mI (708) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (718) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (718) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (728) wifi:Init static rx buffer num: 10[0m
+[0;32mI (728) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (728) wifi_init: rx ba win: 6[0m
+[0;32mI (738) wifi_init: accept mbox: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (738) wifi_init: udp mbox: 10[0m
+[0;32mI (748) wifi_init: tcp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp tx win: 5760[0m
+[0;32mI (748) wifi_init: tcp rx win: 5760[0m
+[0;32mI (748) wifi_init: tcp mss: 1440[0m
+[0;32mI (758) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (758) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;37mSetup ID: Hoa6[0m
+[1;37mHAP Main Loop Started[0m
+[0;32mI (768) mdns_mem: mDNS task will be created from internal RAM[0m
+[1;37mmDNS initialised[0m
+[1;37mRegistering HomeKit web handlers[0m
+[1;37mAnnouncing _hap._tcp mDNS service[0m
+[1;37mHAP Started[0m
+[0;32mI (788) wifi_prov_scheme_ble: BT memory released[0m
+[0;32mI (788) app_wifi: Already provisioned, starting Wi-Fi STA[0m
+[0;32mI (798) wifi_prov_scheme_ble: BTDM memory released[0m
+[0;32mI (798) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (838) wifi:mode : sta (34:cd:b0:51:43:18)[0m
+[0;32mI (838) wifi:enable tsf[0m
+[0;32mI (3248) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3248) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3258) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3258) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (3568) wifi:state: assoc -> assoc (0x0)[0m
+[1;31mE (3568) wifi:Association refused too many times, max allowed 1[0m
+[0;32mI (3568) wifi:state: assoc -> init (0xd010)[0m
+[0;32mI (3578) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3578) app_wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (5988) app_wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (8398) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8408) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8418) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (8428) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (8728) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (8738) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (8758) wifi:connected with #Telia-3134A8, aid = 5, channel 1, BW20, bssid = e4:c0:e2:31:34:ae[0m
+[0;32mI (8758) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (8758) wifi:pm start, type: 1[0m
+
+[0;32mI (8758) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (8768) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (8778) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (8788) wifi:<ba-add>idx:0 (ifx:0, e4:c0:e2:31:34:ae), tid:0, ssn:334, winSize:64[0m
+[0;32mI (10668) app_wifi: Connected with IPv6 Address:fe80:0000:0000:0000:36cd:b0ff:fe51:4318[0m
+[0;32mI (11668) app_wifi: Connected with IPv6 Address:2001:2043:5d09:dd00:36cd:b0ff:fe51:4318[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mPair Verify M3 Received[0m
+[1;37mHomeKit Session active[0m
+[1;37mPair Verify Successful for B4231EAB-3DF4-4A7A-9DBF-7B2F5BF01BF2[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
+[1;37mEvents Enabled for aid=1 iid=15[0m
+[1;37mEvents Enabled for aid=1 iid=13[0m
+[1;37mEvents Enabled for aid=1 iid=17[0m
+[1;37mEvents Enabled for aid=1 iid=16[0m
+[0;32mI (16168) esp_netif_handlers: sta ip: 192.168.1.128, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (16168) app_wifi: Connected with IP Address:192.168.1.128[0m
+[1;37m######## Starting Pair Verify ########[0m
+[1;37mPair Verify M1 Received[0m
+[1;37mPair Verify M2 Successful[0m
