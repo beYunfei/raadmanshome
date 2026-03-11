@@ -1,7 +1,4 @@
-#
-# This is a project Makefile. It is assumed the directory this Makefile resides in is a
-# project subdirectory.
-#
+
 
 HOMEKIT_PATH ?= $(abspath $(shell pwd)/../..)
 COMMON_COMPONENT_PATH ?= $(abspath $(shell pwd)/../common)
